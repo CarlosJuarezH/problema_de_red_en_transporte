@@ -1,0 +1,45 @@
+# --- Archivos de sistema ---
+.DS_Store
+Thumbs.db
+
+# --- Archivos temporales ---
+*.log
+*.tmp
+*.bak
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+
+# --- Jupyter Notebooks checkpoints ---
+.ipynb_checkpoints/
+
+# --- LaTeX ---
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# --- Datos grandes ---
+*.csv
+*.xlsx
+*.json
+*.zip
+*.tar
+*.gz
+
+# --- Compilados o binarios ---
+*.exe
+*.dll
+*.so
+*.o
+*.class
