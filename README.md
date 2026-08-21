@@ -13,9 +13,10 @@ problema_de_red_en_transporte/
 
 ##  Cómo reproducir el proyecto
 1. Clonar el repositorio (git clone git@github.com:usuario/repositorio.git).
-3. Abrir los scripts en la carpeta **codigo/** y ejecutarlos en Python o Colab (incluir un archivo 'requerimentos.txt' para futuros casos donde se trabaje con un entorno específico).
-4. Los datos de entrada se encuentran en **datos/**.
-5. Los resultados y gráficas se guardan en **documentos/**.
+2. Abrir los scripts en la carpeta **codigo/** y ejecutarlos en Python o Colab (incluir un archivo 'requerimentos.txt' para futuros casos donde se trabaje con un
+entorno específico).
+3. Los datos de entrada se encuentran en **datos/**.
+4. Los resultados y gráficas se guardan en **documentos/**.
 
 ## Buenas prácticas
 - Mantener los datos originales en **datos/** sin modificarlos directamente.
