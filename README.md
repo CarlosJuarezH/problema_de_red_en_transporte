@@ -13,15 +13,15 @@ problema_de_red_en_transporte/
 
 ##  Cómo reproducir el proyecto
 1. Clonar el repositorio (git clone git@github.com:usuario/repositorio.git).
-2. Ejecutar los scripts principales desde la carpeta codigo/ (incluir un archivo 'requerimentos.txt para futuros casos donde se trabaje con un entorno específico).
-3. Los datos de entrada se encuentran en datos/.
-4. Los resultados y gráficas se guardan en documentos/.
+3. Abrir los scripts en la carpeta **codigo/** y ejecutarlos en Python o Colab (incluir un archivo 'requerimentos.txt' para futuros casos donde se trabaje con un entorno específico).
+4. Los datos de entrada se encuentran en **datos/**.
+5. Los resultados y gráficas se guardan en **documentos/**.
 
 ## Buenas prácticas
-- Mantener los datos originales en 'datos/' sin modificarlos directamente.
+- Mantener los datos originales en **datos/** sin modificarlos directamente.
 - Usar mensajes de commit claros y atómicos para reflejar el progreso.
 - Documentar cambios relevantes en documentos/.
 
 ## Cómo citar
 Si utilizas este repositorio en tu trabajo académico, por favor cita de la siguiente manera:
-Juárez Hernández, C. M. (2026). Problema de red en transporte [Repositorio en GitHub]. GitHub. https://github.com/CarlosJuarezH/problema_de_red_en_transporte
+**Juárez Hernández, C. M. (2026). Problema de red en transporte [Repositorio en GitHub]. GitHub. https://github.com/CarlosJuarezH/problema_de_red_en_transporte**
