@@ -16,3 +16,5 @@ conjunto de arcos en la red, conjunto de arcos consecutivos, tiempos de ciclo y 
 #Tiempos de ciclo: tiempo en completar una vuelta
 #Stops: conjunto de paraderos en la red
 #Frecuencia conjunta de cada arcos: número de viajes que pasan por ese arco
+
+*Se válido el input, falta agregar datos de los conjuntos*
