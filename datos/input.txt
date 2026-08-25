@@ -1,1 +1,4 @@
-El contenido de este archivo serán los datos de entrada del modelo: tiempos de ciclo, conjunto de arcos, conjunto de arcos consecutivos.
+
+El contenido de este archivo serán los datos de entrada del modelo: como el número de líneas, el conjunto de paraderos de la red, 
+conjunto de arcos en la red, conjunto de arcos consecutivos, tiempos de ciclo y la frecuencia conjunta de cada arco. 
+
