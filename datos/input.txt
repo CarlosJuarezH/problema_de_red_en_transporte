@@ -1,1 +1,1 @@
-El contenido de este archivo serán los datos de entrada del modelo.
+El contenido de este archivo serán los datos de entrada del modelo: tiempos de ciclo, conjunto de arcos, conjunto de arcos consecutivos.
