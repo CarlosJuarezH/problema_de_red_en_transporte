@@ -1,1 +1,1 @@
-El contenido de este archivo serán los datos de entrada del modelo.
+El contenido de este archivo serán los datos de entrada del modelo, como el número de líneas, el conjunto de paraderos de la red, conjunto de arcos en la red y conjunto de arcos consecutivos y la frecuencia conjunta de cada arco. 
