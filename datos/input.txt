@@ -2,3 +2,16 @@
 El contenido de este archivo serán los datos de entrada del modelo: como el número de líneas, el conjunto de paraderos de la red, 
 conjunto de arcos en la red, conjunto de arcos consecutivos, tiempos de ciclo y la frecuencia conjunta de cada arco. 
 
+#Líneas
+301      #Frecuencia
+302      #
+303      #
+305      #
+306      #
+307      #
+309      #
+
+#Conjunto de arcos: # de arcos en la red
+#Conjunto de arcos consecutivos por línea: #arcos
+#Tiempos de ciclo: tiempo en completar una vuelta
+
