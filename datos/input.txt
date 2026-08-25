@@ -11,7 +11,8 @@ conjunto de arcos en la red, conjunto de arcos consecutivos, tiempos de ciclo y 
 307      #
 309      #
 
-#Conjunto de arcos: # de arcos en la red
-#Conjunto de arcos consecutivos por línea: #arcos
+#Conjunto de arcos: # de arcos en la red por la que al menos una línea pase por dicho arco
+#Conjunto de arcos consecutivos por línea: #arcos consecutivos de cada línea
 #Tiempos de ciclo: tiempo en completar una vuelta
-
+#Stops: conjunto de paraderos en la red
+#Frecuencia conjunta de cada arcos: número de viajes que pasan por ese arco
