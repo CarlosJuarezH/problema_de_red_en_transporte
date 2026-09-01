@@ -23,6 +23,10 @@ entorno específico).
 - Usar mensajes de commit claros y atómicos para reflejar el progreso.
 - Documentar cambios relevantes en documentos/.
 
+## LICENSE
+Este proyecto está bajo la **licencia MIT**.
+La elegí porque permite que otros investigadores y estudiantes usen, modifiquen y distribuyan el modelo de red tronco-alimentadora libremente, manteniendo el reconocimiento al autor. Al ser un trabajo académico y de investigación se fomenta la colaboración y reutilización del trabajo en distintos contextos.
+
 ## Cómo citar
 Si utilizas este repositorio en tu trabajo académico, por favor cita de la siguiente manera:
 **Juárez Hernández, C. M. (2026). Problema de red en transporte [Repositorio en GitHub]. GitHub. https://github.com/CarlosJuarezH/problema_de_red_en_transporte**
