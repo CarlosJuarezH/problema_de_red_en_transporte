@@ -30,3 +30,7 @@ La elegí porque permite que otros investigadores y estudiantes usen, modifiquen
 ## Cómo citar
 Si utilizas este repositorio en tu trabajo académico, por favor cita de la siguiente manera:
 **Juárez Hernández, C. M. (2026). Problema de red en transporte [Repositorio en GitHub]. GitHub. https://github.com/CarlosJuarezH/problema_de_red_en_transporte**
+
+Si utilizas este proyecto, por favor cita el repositorio.  
+GitHub genera automáticamente la referencia desde el archivo [CITATION.cff](./CITATION.cff).  
+Haz clic en el botón **Cite this repository** en la página principal del repositorio para obtener la cita en APA, BibTeX u otros estilos.
