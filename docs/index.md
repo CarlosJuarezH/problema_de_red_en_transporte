@@ -12,7 +12,7 @@ El objetivo es **optimizar los tiempos de transferencia y mejorar la eficiencia 
 
 ---
 
-## Contenedor del repositorio
+## Contenido del repositorio
 - **codigo/** -> Scripts y código fuente para el modelo.
 - **datos/** -> Archivos de entrada y especificaciones.
 - **documentos/** -> Reportes técnicos y artículos en LaTex.
@@ -22,6 +22,7 @@ El objetivo es **optimizar los tiempos de transferencia y mejorar la eficiencia 
 ---
 ## Autor
 Carlos Manuel Juárez Hernández
+
 Estudiante de Maestría en Ciencias con Orientación en Matemáticas-FCFM
 
 ---
