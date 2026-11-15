@@ -6,17 +6,19 @@ El objetivo principal es **optimizar la integración entre rutas troncales y ali
 ## Estructura del repositorio:
 problema_de_red_en_transporte/
 |-- codigo/        # Scripts de modelado y simulación (Python, R).
-|-- documentos/    # Reportes técnicos y artículos en LaTex.
 |-- datos/         # Dataset de rutas de transporte urbano.
+|-- docs/    # Reportes técnicos y artículos en LaTex.
 |-- .gitignore
+|-- CITATION.cff
+|-- LICENSE
 |-- README.md      # Descripción general del proyecto.
 
 ##  Cómo reproducir el proyecto
-1. Clonar el repositorio (git clone git@github.com:usuario/repositorio.git).
-2. Abrir los scripts en la carpeta **codigo/** y ejecutarlos en Python o Colab (incluir un archivo 'requerimentos.txt' para futuros casos donde se trabaje con un
+1. Clonar el repositorio (git clone https://github.com/CarlosJuarezH/problema_de_red_en_transporte.git).
+3. Abrir los scripts en la carpeta **codigo/** y ejecutarlos en Python o Colab (incluir un archivo 'requerimentos.txt' para futuros casos donde se trabaje con un
 entorno específico).
-3. Los datos de entrada se encuentran en **datos/**.
-4. Los resultados y gráficas se guardan en **documentos/**.
+4. Los datos de entrada se encuentran en **datos/**.
+5. Los resultados y gráficas se guardan en **documentos/**.
 
 ## Buenas prácticas
 - Mantener los datos originales en **datos/** sin modificarlos directamente.
