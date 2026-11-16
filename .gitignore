@@ -32,7 +32,6 @@ venv/
 # --- Datos grandes ---
 *.csv
 *.xlsx
-*.json
 *.zip
 *.tar
 *.gz
