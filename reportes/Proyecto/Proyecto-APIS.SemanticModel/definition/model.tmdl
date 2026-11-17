@@ -23,6 +23,9 @@ ref table LocalDateTable_018c92dd-5c12-4306-9322-3014203a5e1b
 ref table INEGI
 ref table DimCiudadPais
 ref table DimGeografia
+ref table LocalDateTable_683e64d7-73e2-472b-b488-1274b2ab1463
+ref table DimFecha
+ref table LocalDateTable_bbfd2c6a-7cf7-45da-866b-b8dc23876fc0
 
 ref cultureInfo es-MX
 

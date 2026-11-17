@@ -19,12 +19,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 0,
-            "y": 396.60714285714289
+            "x": 28.571428571428555,
+            "y": 360.89285714285717
           },
           "nodeIndex": "SelectorHabitacion",
           "nodeLineageTag": "dce20fb3-9fed-4ff0-adc2-e4a397b8b5e3",
@@ -32,7 +32,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 5
         },
         {
           "location": {
@@ -45,12 +45,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 4
         },
         {
           "location": {
-            "x": 442.28571428571411,
-            "y": 417.85714285714289
+            "x": 765.142857142857,
+            "y": 355.00000000000006
           },
           "nodeIndex": "INEGI",
           "nodeLineageTag": "ad987a0f-fbe9-4e8a-abb5-605ee92705e0",
@@ -58,12 +58,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 6
         },
         {
           "location": {
-            "x": 373.42857142857133,
-            "y": 135.16071428571428
+            "x": 380.57142857142844,
+            "y": 72.303571428571416
           },
           "nodeIndex": "DimCiudadPais",
           "nodeLineageTag": "b869d7ae-d52b-47a7-b239-8c9922730f2b",
@@ -71,17 +71,29 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
-            "x": 850.57142857142833,
-            "y": 462.3035714285715
+            "x": 1117.7142857142853,
+            "y": 275.16071428571433
           },
           "nodeIndex": "DimGeografia",
           "nodeLineageTag": "d0d4b823-8361-43f6-8abf-dadcde210e93",
           "size": {
             "height": 152,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1375.9999999999995,
+            "y": 227.5
+          },
+          "nodeIndex": "DimFecha",
+          "size": {
+            "height": 200,
             "width": 234
           },
           "zIndex": 0

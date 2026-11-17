@@ -1,0 +1,65 @@
+table DimFecha
+	lineageTag: 5f98656f-020f-4c8e-9d02-3a4f6f1f42fe
+
+	column Date
+		formatString: General Date
+		lineageTag: e84e63cc-c4df-4761-80c0-2764a08883bf
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: b2a09e48-5251-4999-80a1-12a2cf0e4133
+			defaultHierarchy: LocalDateTable_bbfd2c6a-7cf7-45da-866b-b8dc23876fc0.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año
+		formatString: 0
+		lineageTag: a307e3b1-f155-464f-bac9-878141dfcbf9
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Año]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesNumero
+		formatString: 0
+		lineageTag: 2ad99b6b-c51a-4b7e-93fb-dd7059c93163
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [MesNumero]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		lineageTag: d07badae-b7f4-431a-a609-6d9380a2d2a0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre
+		lineageTag: 74711e1e-18d7-4a8f-871c-d873e4387bd3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Trimestre]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimFecha = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS(
+				    CALENDAR(DATE(1910, 1, 1), DATE(2026, 12, 31)),
+				    "Año", YEAR([Date]),
+				    "MesNumero", MONTH([Date]),
+				    "Mes", FORMAT([Date], "MMMM"),
+				    "Trimestre", "T" & FORMAT([Date], "Q")
+				)
+
+	annotation PBI_Id = 854bbb9e4c594809a29f70492982de67
+

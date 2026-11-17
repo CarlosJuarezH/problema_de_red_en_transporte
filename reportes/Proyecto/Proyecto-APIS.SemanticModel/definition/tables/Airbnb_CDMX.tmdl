@@ -465,9 +465,10 @@ table Airbnb_CDMX
 				    #"Columnas quitadas" = Table.RemoveColumns(#"Columnas con nombre cambiado",{"CityCountryKey"}),
 				    #"Personalizada agregada3" = Table.AddColumn(#"Columnas quitadas", "CityCountryKey", each Text.Lower(Text.Trim([city])) & "|" & Text.Lower(Text.Trim([country]))),
 				    #"Consultas combinadas" = Table.NestedJoin(#"Personalizada agregada3", {"alcaldia"}, DimGeografia, {"geography_name"}, "DimGeografia", JoinKind.LeftOuter),
-				    #"Se expandió DimGeografia" = Table.ExpandTableColumn(#"Consultas combinadas", "DimGeografia", {"geography_code"}, {"geography_code"})
+				    #"Se expandió DimGeografia" = Table.ExpandTableColumn(#"Consultas combinadas", "DimGeografia", {"geography_code"}, {"geography_code"}),
+				    #"Filas filtradas" = Table.SelectRows(#"Se expandió DimGeografia", each true)
 				in
-				    #"Se expandió DimGeografia"
+				    #"Filas filtradas"
 
 	annotation PBI_NavigationStepName = Navegación
 

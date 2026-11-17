@@ -156,6 +156,22 @@ table INEGI
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column FechaPeriodo
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 347ac9d1-babb-4f0d-8489-12ef62b396ff
+		summarizeBy: none
+		sourceColumn: FechaPeriodo
+
+		variation Variation
+			isDefault
+			relationship: 7a1837c3-0ca9-4831-858b-f0f090d1057c
+			defaultHierarchy: LocalDateTable_683e64d7-73e2-472b-b488-1274b2ab1463.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
 	partition INEGI = m
 		mode: import
 		source =
@@ -165,9 +181,11 @@ table INEGI
 				            pRutaProyecto & "data\processed\inegi_cdmx_20261117T025258Z.parquet"
 				        )
 				    ),
-				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"value_raw", type text}})
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"value_raw", type text}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Tipo cambiado", "FechaPeriodo", each #date([period], 1, 1)),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Personalizada agregada",{{"FechaPeriodo", type date}})
 				in
-				    #"Tipo cambiado"
+				    #"Tipo cambiado1"
 
 	annotation PBI_NavigationStepName = Navegación
 
