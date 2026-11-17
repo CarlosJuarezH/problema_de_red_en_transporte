@@ -26,7 +26,14 @@ El flujo consulta la API del Banco de Indicadores del INEGI para Ciudad de Méxi
 | `1002000001` | Población total | Personas |
 | `6207019027` | Porcentaje de viviendas particulares habitadas alquiladas | Porcentaje |
 
-El porcentaje de viviendas alquiladas describe la tenencia de las viviendas habitadas; no es una medida del monto de la renta ni identifica viviendas anunciadas en Airbnb.
+La consulta cubre Ciudad de México como entidad federativa y sus 16 alcaldías. Se guarda una respuesta JSON por área geográfica en `data/raw/` y un archivo Parquet conjunto en `data/processed/`. El Parquet conserva el indicador, periodo, valor, código y nombre geográfico, nivel geográfico y metadatos de procedencia.
+
+### Periodos disponibles
+
+- **Ciudad de México como entidad:** población total de 1910 a 2025, en los periodos disponibles de la serie; viviendas alquiladas en 2015 y 2025.
+- **Alcaldías:** población total en 1995, 2000, 2005, 2010 y 2020; viviendas alquiladas en 2015 y 2025.
+
+A nivel de alcaldía, los periodos de ambos indicadores no coinciden. Por ello, no deben interpretarse como una comparación de los dos indicadores para un mismo año. La extracción validada contiene 130 observaciones, sin valores nulos en `value` ni duplicados por indicador, periodo y geografía.
 
 ### Requisitos y ejecución
 
