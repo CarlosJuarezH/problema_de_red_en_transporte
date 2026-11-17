@@ -1,6 +1,15 @@
 table INEGI
 	lineageTag: ad987a0f-fbe9-4e8a-abb5-605ee92705e0
 
+	measure 'Porcentaje de viviendas alquiladas' =
+			
+			CALCULATE(
+			    AVERAGE(INEGI[value]),
+			    KEEPFILTERS(INEGI[indicator_id] = "6207019027")
+			) / 100
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 365b63a9-5d15-4862-9458-c562935bb87d
+
 	column indicator_id
 		dataType: string
 		lineageTag: 714e29dd-364e-41d5-8cd9-9d0c3c797622
