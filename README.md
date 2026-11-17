@@ -1,7 +1,10 @@
-# Proyecto de Rediseño de Red Tronco-Alimentadora
-## Descripción
-Este repositorio contiene el material del proyecto de investigación sobre el rediseño de la red de transporte urbano en una ciudad.
-El objetivo principal es **optimizar la integración entre rutas troncales y alimentadoras**, reduciendo tiempos de espera y/o el número de unidades a utilizar.
+# Vivienda y oferta de Airbnb: comparación global y caso de Ciudad de México
+
+Este proyecto analiza diferencias entre renta mensual estimada y salario neto individual en distintas ciudades, y caracteriza la oferta de Airbnb en Ciudad de México por tipo de alojamiento, precio y estancia.
+
+## Pregunta de investigación
+¿Cómo varía la relación entre la renta mensual y el salario neto mensual estimado entre las ciudades de la base global, y cómo se distribuye la oferta de Airbnb en Ciudad de México?
+
 
 ## Estructura del repositorio:
 problema_de_red_en_transporte/
@@ -12,6 +15,37 @@ problema_de_red_en_transporte/
 |-- CITATION.cff
 |-- LICENSE
 |-- README.md      # Descripción general del proyecto.
+
+
+## Flujo de datos de INEGI
+
+El flujo consulta la API del Banco de Indicadores del INEGI para Ciudad de México (clave geográfica `09`). Recupera la serie histórica de estos indicadores:
+
+| Clave | Indicador | Unidad |
+|---|---|---|
+| `1002000001` | Población total | Personas |
+| `6207019027` | Porcentaje de viviendas particulares habitadas alquiladas | Porcentaje |
+
+El porcentaje de viviendas alquiladas describe la tenencia de las viviendas habitadas; no es una medida del monto de la renta ni identifica viviendas anunciadas en Airbnb.
+
+### Requisitos y ejecución
+
+Se requiere Python y un token válido de INEGI. En GitHub Codespaces, configura el token como secreto llamado `INEGI_TOKEN` con acceso a este repositorio. No lo incluyas en el código ni en archivos versionados.
+
+Instala las dependencias:
+
+```bash
+python -m pip install -r requirements.txt 
+```
+
+Ejecuta el flujo:
+```bash
+python src/descargar_inegi.py
+```
+Archivos generados:
+- data/raw/: respuesta JSON original de la API.
+- data/processed/: tabla Parquet.
+Los nombres de archivo incluyen la fecha y hora de descarga. El Parquet conserva metadatos de procedencia.
 
 ##  Cómo reproducir el proyecto
 1. Clonar el repositorio (git clone https://github.com/CarlosJuarezH/problema_de_red_en_transporte.git).
