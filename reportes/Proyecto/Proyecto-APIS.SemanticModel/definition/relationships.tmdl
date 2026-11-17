@@ -27,3 +27,7 @@ relationship AutoDetected_433c7b12-a29e-456c-9c1e-5d2b4ef7d1e9
 	fromColumn: INEGI.geography_code
 	toColumn: DimGeografia.geography_code
 
+relationship AutoDetected_ff1d7b34-e3a4-4f65-94e6-fa46cadaaef3
+	fromColumn: Airbnb_CDMX.geography_code
+	toColumn: DimGeografia.geography_code
+

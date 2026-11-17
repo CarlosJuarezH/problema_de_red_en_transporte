@@ -409,10 +409,13 @@ table Airbnb_CDMX
 
 	column alcaldia_objetivo
 		dataType: boolean
+		isHidden
 		formatString: """TRUE"";""TRUE"";""FALSE"""
 		lineageTag: e4426149-21d3-4a0a-96ce-9c8778cdc9d8
 		summarizeBy: none
 		sourceColumn: alcaldia_objetivo
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -440,6 +443,14 @@ table Airbnb_CDMX
 
 		annotation SummarizationSetBy = Automatic
 
+	column geography_code
+		dataType: string
+		lineageTag: b452840e-0e10-466f-b08f-a18d033e8687
+		summarizeBy: none
+		sourceColumn: geography_code
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Airbnb_CDMX = m
 		mode: import
 		source =
@@ -452,9 +463,11 @@ table Airbnb_CDMX
 				    #"Personalizada agregada2" = Table.AddColumn(#"Personalizada agregada1", "CityCountryKey", each Text.Lower(Text.Trim([city])) & "|" & Text.Lower(Text.Trim([country]))),
 				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Personalizada agregada2",{{"cityPersonalizado", "city"}}),
 				    #"Columnas quitadas" = Table.RemoveColumns(#"Columnas con nombre cambiado",{"CityCountryKey"}),
-				    #"Personalizada agregada3" = Table.AddColumn(#"Columnas quitadas", "CityCountryKey", each Text.Lower(Text.Trim([city])) & "|" & Text.Lower(Text.Trim([country])))
+				    #"Personalizada agregada3" = Table.AddColumn(#"Columnas quitadas", "CityCountryKey", each Text.Lower(Text.Trim([city])) & "|" & Text.Lower(Text.Trim([country]))),
+				    #"Consultas combinadas" = Table.NestedJoin(#"Personalizada agregada3", {"alcaldia"}, DimGeografia, {"geography_name"}, "DimGeografia", JoinKind.LeftOuter),
+				    #"Se expandió DimGeografia" = Table.ExpandTableColumn(#"Consultas combinadas", "DimGeografia", {"geography_code"}, {"geography_code"})
 				in
-				    #"Personalizada agregada3"
+				    #"Se expandió DimGeografia"
 
 	annotation PBI_NavigationStepName = Navegación
 
