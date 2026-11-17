@@ -10,19 +10,57 @@ import pyarrow.parquet as pq
 import requests
 
 
-# La raíz del proyecto es la carpeta que contiene src/ y data/.
 ROOT = Path(__file__).resolve().parents[1]
 RAW_DIR = ROOT / "data" / "raw"
 PROCESSED_DIR = ROOT / "data" / "processed"
 
-# Claves y nombres descriptivos de los indicadores seleccionados.
 INDICATORS = {
     "6207019027": "porcentaje_viviendas_alquiladas",
     "1002000001": "poblacion_total",
 }
 
-GEOGRAPHY_CODE = "09"
-GEOGRAPHY_NAME = "Ciudad de México"
+ALCALDIAS_CDMX = {
+    "09002": "Azcapotzalco",
+    "09003": "Coyoacán",
+    "09004": "Cuajimalpa de Morelos",
+    "09005": "Gustavo A. Madero",
+    "09006": "Iztacalco",
+    "09007": "Iztapalapa",
+    "09008": "La Magdalena Contreras",
+    "09009": "Milpa Alta",
+    "09010": "Álvaro Obregón",
+    "09011": "Tláhuac",
+    "09012": "Tlalpan",
+    "09013": "Xochimilco",
+    "09014": "Benito Juárez",
+    "09015": "Cuauhtémoc",
+    "09016": "Miguel Hidalgo",
+    "09017": "Venustiano Carranza",
+}
+
+# Incluimos también la consulta estatal que ya funcionaba.
+GEOGRAPHIES = {
+    "09": {
+        "name": "Ciudad de México",
+        "level": "entidad_federativa",
+    },
+    **{
+        code: {
+            "name": name,
+            "level": "alcaldia",
+        }
+        for code, name in ALCALDIAS_CDMX.items()
+    },
+}
+
+
+def build_api_url(indicator_ids, geography_code, token):
+    return (
+        "https://www.inegi.org.mx/app/api/indicadores/"
+        "desarrolladores/jsonxml/INDICATOR/"
+        f"{indicator_ids}/es/{geography_code}/false/BISE/2.0/"
+        f"{token}?type=json"
+    )
 
 
 def main():
@@ -31,123 +69,165 @@ def main():
     if not token:
         sys.exit(
             "No se encontró INEGI_TOKEN. "
-            "Revisa el secreto de Codespaces y reinicia el entorno."
+            "Revisa el secreto de Codespaces."
         )
-
-    indicator_ids = ",".join(INDICATORS.keys())
-
-    # La URL incluye el token para autenticar la consulta.
-    # No la imprimimos para evitar exponerlo en la terminal.
-    url = (
-        "https://www.inegi.org.mx/app/api/indicadores/"
-        "desarrolladores/jsonxml/INDICATOR/"
-        f"{indicator_ids}/es/{GEOGRAPHY_CODE}/false/BISE/2.0/"
-        f"{token}?type=json"
-    )
-
-    try:
-        response = requests.get(url, timeout=60)
-    except requests.RequestException:
-        sys.exit(
-            "No se pudo conectar con la API del INEGI. "
-            "Revisa la conexión e inténtalo de nuevo."
-        )
-
-    if response.status_code != 200:
-        sys.exit(
-            "La API respondió con el código HTTP "
-            f"{response.status_code}. Revisa el token y vuelve a intentarlo."
-        )
-
-    try:
-        payload = response.json()
-    except ValueError:
-        sys.exit("La respuesta de la API no se pudo interpretar como JSON.")
-
-    series = payload.get("Series")
-
-    if not isinstance(series, list):
-        sys.exit(
-            "La respuesta no contiene una lista 'Series'. "
-            "No se generaron archivos."
-        )
-
-    received_ids = {
-        str(serie.get("INDICADOR"))
-        for serie in series
-    }
-    missing_ids = set(INDICATORS) - received_ids
-
-    if missing_ids:
-        sys.exit(
-            "No llegaron todos los indicadores solicitados. "
-            f"Faltan: {', '.join(sorted(missing_ids))}. "
-            "No se generaron archivos."
-        )
-
-    rows = []
-
-    for serie in series:
-        indicator_id = str(serie.get("INDICADOR"))
-        indicator_name = INDICATORS[indicator_id]
-
-        for observation in serie.get("OBSERVATIONS", []):
-            rows.append({
-                "indicator_id": indicator_id,
-                "indicator_name": indicator_name,
-                "period": observation.get("TIME_PERIOD"),
-                "value_raw": observation.get("OBS_VALUE"),
-                "unit_code": serie.get("UNIT"),
-                "frequency_code": serie.get("FREQ"),
-                "topic_code": serie.get("TOPIC"),
-                "geography_code": observation.get("COBER_GEO"),
-                "series_source_code": serie.get("SOURCE"),
-                "series_last_update": serie.get("LASTUPDATE"),
-                "series_note_code": serie.get("NOTE"),
-                "observation_status": observation.get("OBS_STATUS"),
-                "observation_exception": observation.get("OBS_EXCEPTION"),
-                "observation_source": observation.get("OBS_SOURCE"),
-                "observation_note": observation.get("OBS_NOTE"),
-            })
-
-    table_df = pd.DataFrame(rows)
-
-    if table_df.empty:
-        sys.exit("Los indicadores llegaron, pero no contienen observaciones.")
-
-    # Conservamos el valor original y añadimos una columna numérica para analizar.
-    table_df["period"] = pd.to_numeric(
-        table_df["period"], errors="coerce"
-    ).astype("Int64")
-
-    table_df["value"] = pd.to_numeric(
-        table_df["value_raw"], errors="coerce"
-    )
-
-    if table_df["value"].isna().all():
-        sys.exit("No se encontraron valores numéricos para procesar.")
 
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
+    indicator_ids = ",".join(INDICATORS)
     extraction_time = datetime.now(timezone.utc)
     timestamp = extraction_time.strftime("%Y%m%dT%H%M%SZ")
 
-    raw_path = RAW_DIR / f"inegi_cdmx_{timestamp}.json"
-    parquet_path = PROCESSED_DIR / f"inegi_cdmx_{timestamp}.parquet"
+    rows = []
+    issues = []
 
-    # Guardamos exactamente el contenido JSON recibido.
-    raw_path.write_bytes(response.content)
+    for geography_code, geography in GEOGRAPHIES.items():
+        print(
+            "Consultando:",
+            geography["name"],
+            f"({geography_code})",
+        )
 
-    # Convertimos la tabla y añadimos procedencia al esquema Parquet.
-    arrow_table = pa.Table.from_pandas(table_df, preserve_index=False)
+        url = build_api_url(
+            indicator_ids,
+            geography_code,
+            token,
+        )
+
+        try:
+            response = requests.get(url, timeout=60)
+            response.raise_for_status()
+        except requests.RequestException as error:
+            issues.append(
+                f"{geography['name']} ({geography_code}): "
+                f"falló la consulta ({type(error).__name__})."
+            )
+            continue
+
+        raw_path = (
+            RAW_DIR
+            / f"inegi_cdmx_{timestamp}_{geography_code}.json"
+        )
+        raw_path.write_bytes(response.content)
+
+        try:
+            payload = response.json()
+        except ValueError:
+            issues.append(
+                f"{geography['name']} ({geography_code}): "
+                "la respuesta no se pudo interpretar como JSON."
+            )
+            continue
+
+        series = payload.get("Series")
+
+        if not isinstance(series, list):
+            issues.append(
+                f"{geography['name']} ({geography_code}): "
+                "la respuesta no contiene la lista 'Series'."
+            )
+            continue
+
+        received_ids = {
+            str(item.get("INDICADOR"))
+            for item in series
+            if item.get("INDICADOR") is not None
+        }
+
+        missing_ids = set(INDICATORS) - received_ids
+        if missing_ids:
+            names = [
+                INDICATORS[indicator_id]
+                for indicator_id in sorted(missing_ids)
+            ]
+            issues.append(
+                f"{geography['name']} ({geography_code}): "
+                f"no llegaron estos indicadores: {', '.join(names)}."
+            )
+
+        for item in series:
+            indicator_id = str(item.get("INDICADOR"))
+
+            # Ignoramos cualquier indicador que no se haya solicitado.
+            if indicator_id not in INDICATORS:
+                continue
+
+            observations = item.get("OBSERVATIONS") or []
+
+            for observation in observations:
+                returned_code = str(
+                    observation.get("COBER_GEO") or geography_code
+                )
+
+                rows.append({
+                    "indicator_id": indicator_id,
+                    "indicator_name": INDICATORS[indicator_id],
+                    "period": observation.get("TIME_PERIOD"),
+                    "value_raw": observation.get("OBS_VALUE"),
+                    "unit_code": item.get("UNIT"),
+                    "frequency_code": item.get("FREQ"),
+                    "topic_code": item.get("TOPIC"),
+                    "geography_code": returned_code,
+                    "geography_name": GEOGRAPHIES.get(
+                        returned_code,
+                        geography,
+                    )["name"],
+                    "geography_level": GEOGRAPHIES.get(
+                        returned_code,
+                        geography,
+                    )["level"],
+                    "requested_geography_code": geography_code,
+                    "series_source_code": item.get("SOURCE"),
+                    "series_last_update": item.get("LASTUPDATE"),
+                    "series_note_code": item.get("NOTE"),
+                    "observation_status": observation.get("OBS_STATUS"),
+                    "observation_exception": observation.get(
+                        "OBS_EXCEPTION"
+                    ),
+                    "observation_source": observation.get("OBS_SOURCE"),
+                    "observation_note": observation.get("OBS_NOTE"),
+                })
+
+    if not rows:
+        sys.exit(
+            "No se obtuvieron observaciones. "
+            "Revisa los JSON guardados y el token."
+        )
+
+    table_df = pd.DataFrame(rows)
+
+    table_df["period"] = pd.to_numeric(
+        table_df["period"],
+        errors="coerce",
+    ).astype("Int64")
+
+    table_df["value"] = pd.to_numeric(
+        table_df["value_raw"],
+        errors="coerce",
+    )
+
+    parquet_path = (
+        PROCESSED_DIR / f"inegi_cdmx_{timestamp}.parquet"
+    )
+
+    arrow_table = pa.Table.from_pandas(
+        table_df,
+        preserve_index=False,
+    )
     metadata = dict(arrow_table.schema.metadata or {})
 
     metadata.update({
         b"source": b"INEGI - API del Banco de Indicadores",
         b"indicator_ids": indicator_ids.encode("utf-8"),
-        b"geography_code": GEOGRAPHY_CODE.encode("utf-8"),
-        b"geography_name": GEOGRAPHY_NAME.encode("utf-8"),
+        b"geography_codes": ",".join(GEOGRAPHIES).encode("utf-8"),
+        b"geography_names": json.dumps(
+            {
+                code: item["name"]
+                for code, item in GEOGRAPHIES.items()
+            },
+            ensure_ascii=False,
+        ).encode("utf-8"),
         b"language": b"es",
         b"historical_series": b"true",
         b"format": b"json",
@@ -162,12 +242,33 @@ def main():
     arrow_table = arrow_table.replace_schema_metadata(metadata)
     pq.write_table(arrow_table, parquet_path)
 
-    # Mostramos las ubicaciones, pero nunca la URL ni el token.
-    print("Consulta completada.")
-    print(f"Observaciones guardadas: {len(table_df)}")
-    print(f"JSON: {raw_path.relative_to(ROOT)}")
+    print("\nConsulta terminada.")
+    print(f"JSON guardados: {len(list(RAW_DIR.glob(f'inegi_cdmx_{timestamp}_*.json')))}")
+    print(f"Observaciones en Parquet: {len(table_df)}")
     print(f"Parquet: {parquet_path.relative_to(ROOT)}")
-    print("Indicadores recibidos:", ", ".join(sorted(received_ids)))
+
+    print("\nResumen por área e indicador:")
+    resumen = (
+        table_df.groupby(
+            [
+                "geography_level",
+                "geography_name",
+                "indicator_id",
+                "indicator_name",
+            ],
+            dropna=False,
+        )
+        .size()
+        .rename("observaciones")
+    )
+    print(resumen.to_string())
+
+    if issues:
+        print("\nAvisos:")
+        for issue in issues:
+            print(f"- {issue}")
+    else:
+        print("\nNo se detectaron indicadores faltantes.")
 
 
 if __name__ == "__main__":
