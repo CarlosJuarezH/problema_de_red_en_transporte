@@ -58,6 +58,18 @@ Ejecuta el flujo:
 ```bash
 python src/descargar_inegi.py
 ```
+## Validación de medidas con pandas
+
+#### Anuncios Airbnb
+
+- **DAX:** `DISTINCTCOUNT(Airbnb_CDMX[listing_id])`
+- **Archivo usado:** `data/processed/Airbnb_CDMX.csv`
+- **Comprobación en pandas:** conteo de `listing_id` únicos con `nunique(dropna=False)`.
+- **Power BI:** 30,468
+- **pandas:** 30,468
+- **Diferencia:** 0
+- **Resultado:** Coinciden; medida validada.
+- **Contexto:** tabla completa, sin filtros ni segmentadores.
 
 ## Buenas prácticas
 - Mantener los datos originales en **data/** sin modificarlos directamente.
