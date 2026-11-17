@@ -1,0 +1,462 @@
+table Airbnb_CDMX
+	lineageTag: c1d001ec-9eb8-4899-9f6f-28dad42958b3
+
+	measure 'Número de anuncios Airbnb' = DISTINCTCOUNT(Airbnb_CDMX[listing_id])
+		formatString: 0
+		lineageTag: ae95eacf-8a31-4519-8871-431820464581
+
+	measure 'Anuncios Airbnb' = DISTINCTCOUNT(Airbnb_CDMX[listing_id])
+		formatString: 0.000
+		lineageTag: a30a303d-23ab-424b-bbb7-fb9b70a16615
+
+	measure 'Anfitriones únicos' = DISTINCTCOUNT(Airbnb_CDMX[host_id])
+		formatString: 0
+		lineageTag: 9166256e-6968-4e7e-a61b-4f799e82a211
+
+	measure 'Alojamiento completo %' =
+			
+			DIVIDE(
+			    CALCULATE([Anuncios Airbnb], Airbnb_CDMX[alojamiento_completo] = TRUE()),
+			    [Anuncios Airbnb]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 703f27ca-ecdf-44a0-9e18-0cc8e7cf5bcc
+
+		changedProperty = IsHidden
+
+	measure 'Anuncios de anfitriones 3+' =
+			
+			CALCULATE(
+			    [Anuncios Airbnb],
+			    'Airbnb_CDMX'[host_3mas_anuncios_cdmx] = TRUE()
+			)
+		formatString: 0
+		lineageTag: b58b04aa-deda-487f-b2e2-b30cf75eb99f
+
+	measure 'Anuncios host 3+ %' =
+			
+			DIVIDE(
+			    [Anuncios de anfitriones 3+],
+			    [Anuncios Airbnb]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: db036cf2-513b-4f53-942c-547069137f39
+
+	measure 'Precio mediano por noche MXN' =
+			
+			CALCULATE(
+			    MEDIAN('Airbnb_CDMX'[precio_noche_mxn]),
+			    'Airbnb_CDMX'[cotizacion_disponible] = TRUE(),
+			    'Airbnb_CDMX'[cotizacion_mensualizada] = FALSE()
+			)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: f83971c0-6aca-4917-9352-cafe65c4219b
+
+	measure 'Anuncios con mínimo registrado' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT('Airbnb_CDMX'[listing_id]),
+			    FILTER(
+			        'Airbnb_CDMX',
+			        NOT(ISBLANK('Airbnb_CDMX'[estancia_minima_noches]))
+			    )
+			)
+		formatString: 0
+		lineageTag: 215aa52a-bc89-48cf-9a2e-517236837800
+
+	measure 'Anuncios con mínimo de 7 noches o menos' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT('Airbnb_CDMX'[listing_id]),
+			    FILTER(
+			        'Airbnb_CDMX',
+			        NOT(ISBLANK('Airbnb_CDMX'[estancia_minima_noches]))
+			            && 'Airbnb_CDMX'[estancia_minima_noches] <= 7
+			    )
+			)
+		formatString: 0
+		lineageTag: 4f428e3d-c72d-4385-a752-dc7e9c00deaf
+
+	measure 'Porcentaje con mínimo de 7 noches o menos' =
+			
+			DIVIDE(
+			    [Anuncios con mínimo de 7 noches o menos],
+			    [Anuncios con mínimo registrado]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 01b68f20-4436-4188-98d4-e83851225668
+
+	column listing_id
+		dataType: string
+		lineageTag: cf5ff672-3ab4-4e4e-be6b-cea957143a6e
+		summarizeBy: none
+		sourceColumn: listing_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column host_id
+		dataType: string
+		lineageTag: cc7708d5-491e-4f93-bff0-3116469dd878
+		summarizeBy: none
+		sourceColumn: host_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column alcaldia
+		dataType: string
+		lineageTag: 779ec6da-3894-49b2-a417-f745147dc415
+		summarizeBy: none
+		sourceColumn: alcaldia
+
+		annotation SummarizationSetBy = Automatic
+
+	column latitud
+		dataType: double
+		lineageTag: a93e57da-f7f5-4b6a-a303-06533e03fbbc
+		summarizeBy: sum
+		sourceColumn: latitud
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column longitud
+		dataType: double
+		lineageTag: 6cc90f9e-9c28-48f6-b09f-019a55f28cd1
+		summarizeBy: sum
+		sourceColumn: longitud
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column tipo_habitacion
+		dataType: string
+		lineageTag: 08d212d0-2ca6-49d0-b798-31ca48fdf366
+		summarizeBy: none
+		sourceColumn: tipo_habitacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column alojamiento_completo
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5d078333-2685-4949-9c22-7fa21a7751e6
+		summarizeBy: none
+		sourceColumn: alojamiento_completo
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_propiedad
+		dataType: string
+		lineageTag: ef75d921-483c-497f-9900-c4783250f13c
+		summarizeBy: none
+		sourceColumn: tipo_propiedad
+
+		annotation SummarizationSetBy = Automatic
+
+	column capacidad_huespedes
+		dataType: int64
+		formatString: 0
+		lineageTag: 3706606d-5544-40c0-b9b6-e165c5333f91
+		summarizeBy: sum
+		sourceColumn: capacidad_huespedes
+
+		annotation SummarizationSetBy = Automatic
+
+	column habitaciones
+		dataType: int64
+		formatString: 0
+		lineageTag: d1c13c5a-2dbf-408e-b863-e1072e0351c2
+		summarizeBy: sum
+		sourceColumn: habitaciones
+
+		annotation SummarizationSetBy = Automatic
+
+	column camas
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e1460e6-36e8-4100-92f5-07bc50086d8e
+		summarizeBy: sum
+		sourceColumn: camas
+
+		annotation SummarizationSetBy = Automatic
+
+	column banos_texto
+		dataType: string
+		lineageTag: ae35244b-e211-4bf3-b919-973a1b73fad4
+		summarizeBy: none
+		sourceColumn: banos_texto
+
+		annotation SummarizationSetBy = Automatic
+
+	column precio_noche_mxn
+		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: cf24f2fc-0898-4adb-989b-7450d3af066f
+		summarizeBy: none
+		sourceColumn: precio_noche_mxn
+
+		annotation SummarizationSetBy = User
+
+	column moneda_cotizacion
+		dataType: string
+		lineageTag: 7218f863-233a-4f52-b4b5-7017c85e4039
+		summarizeBy: none
+		sourceColumn: moneda_cotizacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column cotizacion_mensualizada
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0518264d-2de5-4451-8b02-d47917d2c5a1
+		summarizeBy: none
+		sourceColumn: cotizacion_mensualizada
+
+		annotation SummarizationSetBy = Automatic
+
+	column cotizacion_disponible
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f790c962-7aa3-4e92-81c4-afbad4052524
+		summarizeBy: none
+		sourceColumn: cotizacion_disponible
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_inicio_cotizacion
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 96c8d14b-e9dc-45d0-b722-cd65ad780c20
+		summarizeBy: none
+		sourceColumn: fecha_inicio_cotizacion
+
+		variation Variation
+			isDefault
+			relationship: 87018dbf-d099-41fd-8d28-c596fd2c89e8
+			defaultHierarchy: LocalDateTable_e4165ee6-28fc-45dd-a27d-fcca7a0894de.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecha_fin_cotizacion
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5d08eb73-9ab8-4cd2-9521-133f45f0852a
+		summarizeBy: none
+		sourceColumn: fecha_fin_cotizacion
+
+		variation Variation
+			isDefault
+			relationship: bb6c5597-c010-4695-af12-a28a6ba34ccb
+			defaultHierarchy: LocalDateTable_c707096a-3a2f-4791-a1c7-eda2a78100c5.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column noches_cotizadas
+		dataType: int64
+		formatString: 0
+		lineageTag: 99a5e696-4e2e-4d57-b9be-2952e2b6122a
+		summarizeBy: sum
+		sourceColumn: noches_cotizadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_recoleccion
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 09ea7d08-3f06-41a0-bf36-6b5547ab075d
+		summarizeBy: none
+		sourceColumn: fecha_recoleccion
+
+		variation Variation
+			isDefault
+			relationship: 41f24319-a015-40e6-bd5d-0cb843d0b70e
+			defaultHierarchy: LocalDateTable_018c92dd-5c12-4306-9322-3014203a5e1b.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column estancia_minima_noches
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e6a3ba1-a0c6-4dc2-b781-a7b1f79cb6a5
+		summarizeBy: sum
+		sourceColumn: estancia_minima_noches
+
+		annotation SummarizationSetBy = Automatic
+
+	column estancia_maxima_noches
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a870997-571f-40dc-911f-0f7d692e8c01
+		summarizeBy: sum
+		sourceColumn: estancia_maxima_noches
+
+		annotation SummarizationSetBy = Automatic
+
+	column disponibilidad_30_dias
+		dataType: int64
+		formatString: 0
+		lineageTag: 215eac48-096b-4f85-a1fb-83a5997d58c9
+		summarizeBy: sum
+		sourceColumn: disponibilidad_30_dias
+
+		annotation SummarizationSetBy = Automatic
+
+	column disponibilidad_60_dias
+		dataType: int64
+		formatString: 0
+		lineageTag: 8ce5d32d-8c05-4b2c-a079-9652d623b771
+		summarizeBy: sum
+		sourceColumn: disponibilidad_60_dias
+
+		annotation SummarizationSetBy = Automatic
+
+	column disponibilidad_90_dias
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c4a31e1-2d32-4337-9d6d-df85b6e829fb
+		summarizeBy: sum
+		sourceColumn: disponibilidad_90_dias
+
+		annotation SummarizationSetBy = Automatic
+
+	column disponibilidad_365_dias
+		dataType: int64
+		formatString: 0
+		lineageTag: 3de621e2-4356-4662-b14f-667d5a9e8bc9
+		summarizeBy: sum
+		sourceColumn: disponibilidad_365_dias
+
+		annotation SummarizationSetBy = Automatic
+
+	column hay_disponibilidad
+		dataType: string
+		lineageTag: 2a921e5d-3890-420a-9d7b-a2e1a0a27716
+		summarizeBy: none
+		sourceColumn: hay_disponibilidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column resenas_totales
+		dataType: int64
+		formatString: 0
+		lineageTag: 85d8680d-1abd-45b1-96c7-1dcb7c12e1be
+		summarizeBy: sum
+		sourceColumn: resenas_totales
+
+		annotation SummarizationSetBy = Automatic
+
+	column resenas_ultimos_365_dias
+		dataType: int64
+		formatString: 0
+		lineageTag: 9ddcb35c-ce73-4470-b7f4-75fb170818e2
+		summarizeBy: sum
+		sourceColumn: resenas_ultimos_365_dias
+
+		annotation SummarizationSetBy = Automatic
+
+	column calificacion_promedio
+		dataType: double
+		lineageTag: 695011dd-6595-4167-9dcf-faa001f70871
+		summarizeBy: sum
+		sourceColumn: calificacion_promedio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ocupacion_estimada_noches_365_dias
+		dataType: int64
+		formatString: 0
+		lineageTag: 65c416d0-6367-4bd1-a501-9253bb5a5113
+		summarizeBy: sum
+		sourceColumn: ocupacion_estimada_noches_365_dias
+
+		annotation SummarizationSetBy = Automatic
+
+	column anuncios_host_cdmx
+		dataType: int64
+		formatString: 0
+		lineageTag: 17ef64c8-07d4-4227-88fe-197d6179c1e8
+		summarizeBy: sum
+		sourceColumn: anuncios_host_cdmx
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoria_anfitrion_cdmx
+		dataType: string
+		lineageTag: 7c51e2d4-74c2-4c61-b49f-cf74d995c5f8
+		summarizeBy: none
+		sourceColumn: categoria_anfitrion_cdmx
+
+		annotation SummarizationSetBy = Automatic
+
+	column host_3mas_anuncios_cdmx
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3140c73b-086b-4b4b-94f2-f7624afc6393
+		summarizeBy: none
+		sourceColumn: host_3mas_anuncios_cdmx
+
+		annotation SummarizationSetBy = Automatic
+
+	column alcaldia_objetivo
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e4426149-21d3-4a0a-96ce-9c8778cdc9d8
+		summarizeBy: none
+		sourceColumn: alcaldia_objetivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		lineageTag: 38a89218-b113-4de3-be33-cd7404cb0458
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		lineageTag: ade8c48d-70e3-4aca-8f02-390744c53f41
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column CityCountryKey
+		dataType: string
+		lineageTag: 4f61c87a-30b7-4732-bda2-55b7e7440796
+		summarizeBy: none
+		sourceColumn: CityCountryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Airbnb_CDMX = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\Carlo\OneDrive\Escritorio\Documents\Maestría\Semestre\AGO-DIC 2026\Cómputo científico\Proyecto\Datos limpios\Airbnb_CDMX_limpio_PowerBI.csv"),[Delimiter=",", Columns=35, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"listing_id", type text}, {"host_id", type text}, {"alcaldia", type text}, {"latitud", type number}, {"longitud", type number}, {"tipo_habitacion", type text}, {"alojamiento_completo", type logical}, {"tipo_propiedad", type text}, {"capacidad_huespedes", Int64.Type}, {"habitaciones", Int64.Type}, {"camas", Int64.Type}, {"banos_texto", type text}, {"precio_noche_mxn", type number}, {"moneda_cotizacion", type text}, {"cotizacion_mensualizada", type logical}, {"cotizacion_disponible", type logical}, {"fecha_inicio_cotizacion", type date}, {"fecha_fin_cotizacion", type date}, {"noches_cotizadas", Int64.Type}, {"fecha_recoleccion", type date}, {"estancia_minima_noches", Int64.Type}, {"estancia_maxima_noches", Int64.Type}, {"disponibilidad_30_dias", Int64.Type}, {"disponibilidad_60_dias", Int64.Type}, {"disponibilidad_90_dias", Int64.Type}, {"disponibilidad_365_dias", Int64.Type}, {"hay_disponibilidad", type text}, {"resenas_totales", Int64.Type}, {"resenas_ultimos_365_dias", Int64.Type}, {"calificacion_promedio", type number}, {"ocupacion_estimada_noches_365_dias", Int64.Type}, {"anuncios_host_cdmx", Int64.Type}, {"categoria_anfitrion_cdmx", type text}, {"host_3mas_anuncios_cdmx", type logical}, {"alcaldia_objetivo", type logical}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Tipo cambiado", "cityPersonalizado", each "Mexico City"),
+				    #"Personalizada agregada1" = Table.AddColumn(#"Personalizada agregada", "country", each "Mexico"),
+				    #"Personalizada agregada2" = Table.AddColumn(#"Personalizada agregada1", "CityCountryKey", each Text.Lower(Text.Trim([city])) & "|" & Text.Lower(Text.Trim([country]))),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Personalizada agregada2",{{"cityPersonalizado", "city"}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Columnas con nombre cambiado",{"CityCountryKey"}),
+				    #"Personalizada agregada3" = Table.AddColumn(#"Columnas quitadas", "CityCountryKey", each Text.Lower(Text.Trim([city])) & "|" & Text.Lower(Text.Trim([country])))
+				in
+				    #"Personalizada agregada3"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

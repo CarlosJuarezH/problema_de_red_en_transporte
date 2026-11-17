@@ -1,0 +1,80 @@
+table SelectorHabitacion
+	lineageTag: dce20fb3-9fed-4ff0-adc2-e4a397b8b5e3
+
+	measure 'Renta centro seleccionada MXM' =
+			
+			VAR Tipo = SELECTEDVALUE(SelectorHabitacion[TipoHabitacion])
+			RETURN
+			    SWITCH(
+			        Tipo,
+			        "1 habitación", AVERAGE(Datos_limpios[Renta 1 hab centro ML]),
+			        "3 Habitaciones", AVERAGE(Datos_limpios[Renta 3 hab centro ML]),
+			        BLANK()
+			    )
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 044b8b7d-9900-4426-b83e-0660fe48ff63
+
+	measure 'Renta fuera seleccionada MXM' =
+			
+			VAR Tipo = SELECTEDVALUE(SelectorHabitacion[TipoHabitacion])
+			RETURN
+			    SWITCH(
+			        Tipo,
+			        "1 habitación", AVERAGE(Datos_limpios[Renta 1 hab fuera ML]),
+			        "3 habitaciones", AVERAGE(Datos_limpios[Renta 3 hab fuera ML]),
+			        BLANK()
+			    )
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: a889b09f-e0fd-48c9-aa61-ad8fa814e642
+
+	measure 'Renta fuera seleccionada USD' = ```
+			
+			VAR Tipo = SELECTEDVALUE(SelectorHabitacion[TipoHabitacion])
+			RETURN
+			    SWITCH(
+			        Tipo, 
+			        "1 habitación", AVERAGE(Datos_limpios[Renta 1 hab fuera USD]),
+			        "3 habitaciones", AVERAGE(Datos_limpios[Renta 3 hab fuera USD]),
+			        BLANK()
+			    )
+			```
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: fde458c9-0b41-4318-b512-f9a261cc7083
+
+	measure 'Renta centro seleccionada USD' =
+			
+			VAR Tipo = SELECTEDVALUE(SelectorHabitacion[TipoHabitacion])
+			RETURN
+			    SWITCH(
+			        Tipo,
+			        "1 habitación", AVERAGE(Datos_limpios[Renta 1 hab centro USD]),
+			        "3 habitaciones", AVERAGE(Datos_limpios[Renta 3 hab centro USD]),
+			        BLANK()
+			    )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: f42879dc-8196-4b9d-a232-73d7c38aa214
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	column TipoHabitacion
+		lineageTag: 6949e997-ed73-4dc4-938b-a4a63b3f3e58
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [TipoHabitacion]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SelectorHabitacion = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "TipoHabitacion", STRING,
+				    {
+				        {"1 habitación"},
+				        {"3 habitaciones"}
+				    }
+				)
+
+	annotation PBI_Id = 4b75b07cdd404aafaddefb026bc3222c
+

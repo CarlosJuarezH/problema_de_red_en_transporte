@@ -1,0 +1,19 @@
+relationship 87018dbf-d099-41fd-8d28-c596fd2c89e8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Airbnb_CDMX.fecha_inicio_cotizacion
+	toColumn: LocalDateTable_e4165ee6-28fc-45dd-a27d-fcca7a0894de.Date
+
+relationship bb6c5597-c010-4695-af12-a28a6ba34ccb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Airbnb_CDMX.fecha_fin_cotizacion
+	toColumn: LocalDateTable_c707096a-3a2f-4791-a1c7-eda2a78100c5.Date
+
+relationship 41f24319-a015-40e6-bd5d-0cb843d0b70e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Airbnb_CDMX.fecha_recoleccion
+	toColumn: LocalDateTable_018c92dd-5c12-4306-9322-3014203a5e1b.Date
+
+relationship 3fed14dc-287b-1460-dcf8-e16e2871a2b4
+	fromColumn: Airbnb_CDMX.CityCountryKey
+	toColumn: Datos_limpios.CityCountryKey
+
