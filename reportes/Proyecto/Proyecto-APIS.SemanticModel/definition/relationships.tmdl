@@ -31,13 +31,7 @@ relationship AutoDetected_ff1d7b34-e3a4-4f65-94e6-fa46cadaaef3
 	fromColumn: Airbnb_CDMX.geography_code
 	toColumn: DimGeografia.geography_code
 
-relationship 7a1837c3-0ca9-4831-858b-f0f090d1057c
-	joinOnDateBehavior: datePartOnly
+relationship 3c294552-a2bc-f1b1-2d17-7703d1245eda
 	fromColumn: INEGI.FechaPeriodo
-	toColumn: LocalDateTable_683e64d7-73e2-472b-b488-1274b2ab1463.Date
-
-relationship b2a09e48-5251-4999-80a1-12a2cf0e4133
-	joinOnDateBehavior: datePartOnly
-	fromColumn: DimFecha.Date
-	toColumn: LocalDateTable_bbfd2c6a-7cf7-45da-866b-b8dc23876fc0.Date
+	toColumn: DimFecha.Date
 

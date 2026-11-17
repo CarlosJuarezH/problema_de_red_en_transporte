@@ -163,11 +163,6 @@ table INEGI
 		summarizeBy: none
 		sourceColumn: FechaPeriodo
 
-		variation Variation
-			isDefault
-			relationship: 7a1837c3-0ca9-4831-858b-f0f090d1057c
-			defaultHierarchy: LocalDateTable_683e64d7-73e2-472b-b488-1274b2ab1463.'Jerarquía de fechas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
