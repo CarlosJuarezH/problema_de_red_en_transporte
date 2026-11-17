@@ -69,7 +69,17 @@ python src/descargar_inegi.py
 - **pandas:** 30,468
 - **Diferencia:** 0
 - **Resultado:** Coinciden; medida validada.
-- **Contexto:** tabla completa, sin filtros ni segmentadores.
+
+#### Precio mediano por noche MXN
+
+- **DAX:** mediana de `precio_noche_mxn`, filtrando cotizaciones disponibles y no mensualizadas.
+- **Archivo usado:** `data/processed/Airbnb_CDMX.csv`
+- **Registros con precio considerados por pandas:** 28,063
+- **Power BI:** $1,505.00 MXN
+- **pandas:** $1,505.00 MXN
+- **Diferencia:** $0.00
+- **Resultado:** Coinciden; medida validada.
+
 
 ## Buenas prácticas
 - Mantener los datos originales en **data/** sin modificarlos directamente.
