@@ -80,6 +80,16 @@ python src/descargar_inegi.py
 - **Diferencia:** $0.00
 - **Resultado:** Coinciden; medida validada.
 
+#### Carga 3 hab centro
+
+- **DAX:** `DIVIDE([Renta 3 habitaciones centro USD], [Salario neto mensual en USD])`
+- **Archivo usado:** `data/processed/Costo_de_vida_limpio.xlsx`, hoja `Datos_limpios`
+- **Renta promedio según pandas:** 1,798.10 USD
+- **Salario promedio según pandas:** 2,607.37 USD
+- **Carga según pandas:** 68.96 %
+- **Power BI:** 68.96 %
+- **Resultado:** Coinciden al redondear a dos decimales; medida validada.
+- **Contexto:** tabla completa, sin filtros ni segmentadores.
 
 ## Buenas prácticas
 - Mantener los datos originales en **data/** sin modificarlos directamente.
