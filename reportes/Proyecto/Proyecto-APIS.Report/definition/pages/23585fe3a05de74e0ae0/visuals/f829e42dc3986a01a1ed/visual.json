@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Datos_limpios"
+                      "Entity": "Costo_de_vida_limpio"
                     }
                   },
                   "Property": "city"
@@ -39,7 +39,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Datos_limpios"
+                      "Entity": "Costo_de_vida_limpio"
                     }
                   },
                   "Property": "Precio compra centro m2 MXM"
@@ -53,7 +53,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Datos_limpios"
+                      "Entity": "Costo_de_vida_limpio"
                     }
                   },
                   "Property": "Precio compra fuera m2 MXM"
@@ -72,7 +72,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Datos_limpios"
+                    "Entity": "Costo_de_vida_limpio"
                   }
                 },
                 "Property": "Precio compra centro m2 MXM"

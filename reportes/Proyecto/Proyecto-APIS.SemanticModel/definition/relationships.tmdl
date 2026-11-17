@@ -17,7 +17,7 @@ relationship AutoDetected_e793593e-0220-4a62-93b1-fe9b9607eac5
 	crossFilteringBehavior: bothDirections
 	fromCardinality: one
 	fromColumn: DimCiudadPais.CityCountryKey
-	toColumn: Datos_limpios.CityCountryKey
+	toColumn: Costo_de_vida_limpio.CityCountryKey
 
 relationship d645e707-4b8f-35da-2d47-bc030d0d2906
 	fromColumn: Airbnb_CDMX.CityCountryKey

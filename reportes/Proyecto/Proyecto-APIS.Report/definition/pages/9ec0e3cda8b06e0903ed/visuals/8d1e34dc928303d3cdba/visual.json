@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Datos_limpios"
+                      "Entity": "Costo_de_vida_limpio"
                     }
                   },
                   "Property": "Ciudad - País"
@@ -39,7 +39,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Datos_limpios"
+                      "Entity": "Costo_de_vida_limpio"
                     }
                   },
                   "Property": "Carga de renta fuera seleccionada USD"
@@ -57,7 +57,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Datos_limpios"
+                      "Entity": "Costo_de_vida_limpio"
                     }
                   },
                   "Property": "Salario neto mensual en USD"
@@ -440,7 +440,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Datos_limpios"
+                "Entity": "Costo_de_vida_limpio"
               }
             },
             "Property": "city"

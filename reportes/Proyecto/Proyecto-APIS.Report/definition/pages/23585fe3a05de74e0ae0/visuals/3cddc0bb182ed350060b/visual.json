@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Datos_limpios"
+                      "Entity": "Costo_de_vida_limpio"
                     }
                   },
                   "Property": "city"
@@ -39,7 +39,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Datos_limpios"
+                      "Entity": "Costo_de_vida_limpio"
                     }
                   },
                   "Property": "Salario neto mensual moneda local"
@@ -58,7 +58,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Datos_limpios"
+                    "Entity": "Costo_de_vida_limpio"
                   }
                 },
                 "Property": "Salario neto mensual moneda local"

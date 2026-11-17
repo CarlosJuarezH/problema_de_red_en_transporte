@@ -29,7 +29,7 @@ table DimCiudadPais
 		mode: import
 		source =
 				let
-				    Origen = Datos_limpios,
+				    Origen = Costo_de_vida_limpio,
 				    #"Otras columnas quitadas" = Table.SelectColumns(Origen,{"city", "country", "CityCountryKey"}),
 				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas", {"CityCountryKey"})
 				in

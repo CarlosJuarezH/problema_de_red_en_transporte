@@ -13,7 +13,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Datos_limpios"
+                "Entity": "Costo_de_vida_limpio"
               }
             },
             "Property": "Ciudad - País"
@@ -25,7 +25,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "Datos_limpios",
+              "Entity": "Costo_de_vida_limpio",
               "Type": 0
             }
           ],

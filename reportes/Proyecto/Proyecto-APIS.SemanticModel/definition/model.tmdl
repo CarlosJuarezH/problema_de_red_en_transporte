@@ -9,11 +9,11 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Datos_limpios","Airbnb_CDMX","pRutaProyecto","INEGI","DimCiudadPais","DimGeografia"]
+annotation PBI_QueryOrder = ["Costo_de_vida_limpio","Airbnb_CDMX","pRutaProyecto","INEGI","DimCiudadPais","DimGeografia"]
 
 annotation PBI_ProTooling = ["DaxQueryView_Desktop","DevMode"]
 
-ref table Datos_limpios
+ref table Costo_de_vida_limpio
 ref table SelectorHabitacion
 ref table Airbnb_CDMX
 ref table DateTableTemplate_8871da95-4e5b-4c41-96a0-3596eedfcacf

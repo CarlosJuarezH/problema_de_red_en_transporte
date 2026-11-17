@@ -7,8 +7,8 @@ table SelectorHabitacion
 			RETURN
 			    SWITCH(
 			        Tipo,
-			        "1 habitación", AVERAGE(Datos_limpios[Renta 1 hab centro ML]),
-			        "3 Habitaciones", AVERAGE(Datos_limpios[Renta 3 hab centro ML]),
+			        "1 habitación", AVERAGE(Costo_de_vida_limpio[Renta 1 hab centro ML]),
+			        "3 Habitaciones", AVERAGE(Costo_de_vida_limpio[Renta 3 hab centro ML]),
 			        BLANK()
 			    )
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
@@ -20,8 +20,8 @@ table SelectorHabitacion
 			RETURN
 			    SWITCH(
 			        Tipo,
-			        "1 habitación", AVERAGE(Datos_limpios[Renta 1 hab fuera ML]),
-			        "3 habitaciones", AVERAGE(Datos_limpios[Renta 3 hab fuera ML]),
+			        "1 habitación", AVERAGE(Costo_de_vida_limpio[Renta 1 hab fuera ML]),
+			        "3 habitaciones", AVERAGE(Costo_de_vida_limpio[Renta 3 hab fuera ML]),
 			        BLANK()
 			    )
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
@@ -33,8 +33,8 @@ table SelectorHabitacion
 			RETURN
 			    SWITCH(
 			        Tipo, 
-			        "1 habitación", AVERAGE(Datos_limpios[Renta 1 hab fuera USD]),
-			        "3 habitaciones", AVERAGE(Datos_limpios[Renta 3 hab fuera USD]),
+			        "1 habitación", AVERAGE(Costo_de_vida_limpio[Renta 1 hab fuera USD]),
+			        "3 habitaciones", AVERAGE(Costo_de_vida_limpio[Renta 3 hab fuera USD]),
 			        BLANK()
 			    )
 			```
@@ -47,8 +47,8 @@ table SelectorHabitacion
 			RETURN
 			    SWITCH(
 			        Tipo,
-			        "1 habitación", AVERAGE(Datos_limpios[Renta 1 hab centro USD]),
-			        "3 habitaciones", AVERAGE(Datos_limpios[Renta 3 hab centro USD]),
+			        "1 habitación", AVERAGE(Costo_de_vida_limpio[Renta 1 hab centro USD]),
+			        "3 habitaciones", AVERAGE(Costo_de_vida_limpio[Renta 3 hab centro USD]),
 			        BLANK()
 			    )
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00

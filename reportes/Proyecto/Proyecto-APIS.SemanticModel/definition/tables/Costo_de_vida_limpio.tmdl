@@ -1,12 +1,12 @@
-table Datos_limpios
+table Costo_de_vida_limpio
 	lineageTag: 8ac0c2be-45b6-4e73-b5e5-42021a7c9e15
 
-	measure 'Renta 1 habitación centro USD' = AVERAGE(Datos_limpios[Renta 1 hab centro USD])
+	measure 'Renta 1 habitación centro USD' = AVERAGE(Costo_de_vida_limpio[Renta 1 hab centro USD])
 		lineageTag: d6d0c99a-055d-4eb9-98e5-e26cf7451fbb
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Salario neto mensual en USD' = AVERAGE(Datos_limpios[Salario neto mensual promedio USD])
+	measure 'Salario neto mensual en USD' = AVERAGE(Costo_de_vida_limpio[Salario neto mensual promedio USD])
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: e32e8e6a-ac98-4f3c-92e1-ebcec1d03a5e
 
@@ -14,7 +14,7 @@ table Datos_limpios
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 203422d1-41e2-4014-8364-d9ac3ddcf686
 
-	measure 'Renta 1 hab fuera del centro USD' = AVERAGE(Datos_limpios[Renta 1 hab fuera USD])
+	measure 'Renta 1 hab fuera del centro USD' = AVERAGE(Costo_de_vida_limpio[Renta 1 hab fuera USD])
 		lineageTag: d72c80e8-ebdc-4a63-846f-087501d24986
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -23,17 +23,17 @@ table Datos_limpios
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 797a2186-eed5-4aca-bca2-5eecada10617
 
-	measure 'Renta 1 hab centro moneda local' = AVERAGE(Datos_limpios[Renta 1 hab centro ML])
+	measure 'Renta 1 hab centro moneda local' = AVERAGE(Costo_de_vida_limpio[Renta 1 hab centro ML])
 		lineageTag: f339aee8-0182-4e07-9081-30735e387946
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Renta 1 hab fuera moneda local' = AVERAGE(Datos_limpios[Renta 1 hab fuera ML])
+	measure 'Renta 1 hab fuera moneda local' = AVERAGE(Costo_de_vida_limpio[Renta 1 hab fuera ML])
 		lineageTag: 449075c4-f819-4c21-beed-b08306403eb9
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Salario neto mensual moneda local' = AVERAGE(Datos_limpios[Salario neto mensual promedio ML])
+	measure 'Salario neto mensual moneda local' = AVERAGE(Costo_de_vida_limpio[Salario neto mensual promedio ML])
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 053931ce-db2c-4d55-86b9-4feb191ed298
 
@@ -45,12 +45,12 @@ table Datos_limpios
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: df33c524-92d0-4b0f-9964-a319782620ab
 
-	measure 'Renta 3 habitaciones centro USD' = AVERAGE(Datos_limpios[Renta 3 hab centro USD])
+	measure 'Renta 3 habitaciones centro USD' = AVERAGE(Costo_de_vida_limpio[Renta 3 hab centro USD])
 		lineageTag: 133eb761-38e6-4b03-86f3-33cb1c8f43b9
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Renta 3 habitaciones fuera USD' = AVERAGE(Datos_limpios[Renta 3 hab fuera USD])
+	measure 'Renta 3 habitaciones fuera USD' = AVERAGE(Costo_de_vida_limpio[Renta 3 hab fuera USD])
 		lineageTag: 56913614-cb2f-4cd8-bffe-896f42f9abc3
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -65,11 +65,11 @@ table Datos_limpios
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 84dad05a-6ae8-496e-8b36-4e3c2074a682
 
-	measure 'Precio compra centro m2 MXM' = AVERAGE(Datos_limpios[Compra m^2 centro  ML])
+	measure 'Precio compra centro m2 MXM' = AVERAGE(Costo_de_vida_limpio[Compra m^2 centro  ML])
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: c7bd4f4b-81d0-4292-8d01-ff90f0e97676
 
-	measure 'Precio compra fuera m2 MXM' = AVERAGE(Datos_limpios[Compra m^2 fuera ML])
+	measure 'Precio compra fuera m2 MXM' = AVERAGE(Costo_de_vida_limpio[Compra m^2 fuera ML])
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 7a44c4d5-ab06-4f39-a12a-b4e3251666b8
 
@@ -457,7 +457,7 @@ table Datos_limpios
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column 'Ciudad - País' = 'Datos_limpios'[city]&", "& Datos_limpios[country]
+	column 'Ciudad - País' = 'Costo_de_vida_limpio'[city]&", "& Costo_de_vida_limpio[country]
 		lineageTag: 405ecad4-1b65-445e-a455-d036f6ea9deb
 		summarizeBy: none
 
@@ -471,7 +471,7 @@ table Datos_limpios
 
 		annotation SummarizationSetBy = Automatic
 
-	partition Datos_limpios = m
+	partition Costo_de_vida_limpio = m
 		mode: import
 		source =
 				let

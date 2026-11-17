@@ -8,7 +8,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_3_habitaciones_centro_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 3 habitaciones centro USD"
 			        }
 			      },
@@ -24,7 +24,7 @@ cultureInfo es-MX
 			    "datos_limpio": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios"
+			          "ConceptualEntity": "Costo_de_vida_limpio"
 			        }
 			      },
 			      "State": "Generated",
@@ -53,7 +53,7 @@ cultureInfo es-MX
 			    "datos_limpio.source_row_id": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "source_row_id"
 			        }
 			      },
@@ -194,7 +194,7 @@ cultureInfo es-MX
 			    "datos_limpio.city": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "city"
 			        }
 			      },
@@ -260,7 +260,7 @@ cultureInfo es-MX
 			    "datos_limpio.country": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "country"
 			        }
 			      },
@@ -296,7 +296,7 @@ cultureInfo es-MX
 			    "datos_limpio.x_48": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "x48"
 			        }
 			      },
@@ -319,7 +319,7 @@ cultureInfo es-MX
 			    "datos_limpio.x_49": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "x49"
 			        }
 			      },
@@ -342,7 +342,7 @@ cultureInfo es-MX
 			    "datos_limpio.x_50": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "x50"
 			        }
 			      },
@@ -365,7 +365,7 @@ cultureInfo es-MX
 			    "datos_limpio.x_51": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "x51"
 			        }
 			      },
@@ -388,7 +388,7 @@ cultureInfo es-MX
 			    "datos_limpio.x_52": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "x52"
 			        }
 			      },
@@ -411,7 +411,7 @@ cultureInfo es-MX
 			    "datos_limpio.x_53": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "x53"
 			        }
 			      },
@@ -434,7 +434,7 @@ cultureInfo es-MX
 			    "datos_limpio.x_54": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "x54"
 			        }
 			      },
@@ -457,7 +457,7 @@ cultureInfo es-MX
 			    "datos_limpio.x_55": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "x55"
 			        }
 			      },
@@ -480,7 +480,7 @@ cultureInfo es-MX
 			    "datos_limpio.data_quality": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "data_quality"
 			        }
 			      },
@@ -609,7 +609,7 @@ cultureInfo es-MX
 			    "datos_limpio.IMF_country_code": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "IMF_country_code"
 			        }
 			      },
@@ -708,7 +708,7 @@ cultureInfo es-MX
 			    "datos_limpio.country_link_status": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "country_link_status"
 			        }
 			      },
@@ -843,7 +843,7 @@ cultureInfo es-MX
 			    "datos_limpio.monthly_CPI_status": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "monthly_CPI_status"
 			        }
 			      },
@@ -978,7 +978,7 @@ cultureInfo es-MX
 			    "datos_limpio.monthly_FX_status": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "monthly_FX_status"
 			        }
 			      },
@@ -1113,7 +1113,7 @@ cultureInfo es-MX
 			    "datos_limpio.CPI_sep_2022": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "CPI_Sep2022"
 			        }
 			      },
@@ -1142,7 +1142,7 @@ cultureInfo es-MX
 			    "datos_limpio.CPI_sep_2026": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "CPI_Sep2026"
 			        }
 			      },
@@ -1171,7 +1171,7 @@ cultureInfo es-MX
 			    "datos_limpio.inflation_factor_sep_2022_sep_2026": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "inflation_factor_Sep2022_Sep2026"
 			        }
 			      },
@@ -1218,7 +1218,7 @@ cultureInfo es-MX
 			    "datos_limpio.inflation_pct_sep_2022_sep_2026": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "inflation_pct_Sep2022_Sep2026"
 			        }
 			      },
@@ -1241,7 +1241,7 @@ cultureInfo es-MX
 			    "datos_limpio.fx_sep_2022_LCU_per_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "fx_Sep2022_LCU_per_USD"
 			        }
 			      },
@@ -1288,7 +1288,7 @@ cultureInfo es-MX
 			    "datos_limpio.fx_sep_2026_LCU_per_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "fx_Sep2026_LCU_per_USD"
 			        }
 			      },
@@ -1335,7 +1335,7 @@ cultureInfo es-MX
 			    "datos_limpio.fx_factor_sep_2022_sep_2026": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "fx_factor_Sep2022_Sep2026"
 			        }
 			      },
@@ -1382,7 +1382,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_1_hab_centro_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 1 hab centro USD"
 			        }
 			      },
@@ -1398,7 +1398,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_1_hab_fuera_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 1 hab fuera USD"
 			        }
 			      },
@@ -1414,7 +1414,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_3_hab_centro_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 3 hab centro USD"
 			        }
 			      },
@@ -1430,7 +1430,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_3_hab_fuera_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 3 hab fuera USD"
 			        }
 			      },
@@ -1446,7 +1446,7 @@ cultureInfo es-MX
 			    "datos_limpio.compra_m2_centro_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Compra m^2 centro USD"
 			        }
 			      },
@@ -1462,7 +1462,7 @@ cultureInfo es-MX
 			    "datos_limpio.compra_m2_fuera_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Compra m^2 fuera USD"
 			        }
 			      },
@@ -1478,7 +1478,7 @@ cultureInfo es-MX
 			    "datos_limpio.salario_neto_mensual_promedio_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Salario neto mensual promedio USD"
 			        }
 			      },
@@ -1494,7 +1494,7 @@ cultureInfo es-MX
 			    "datos_limpio.x_55_2026": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "x55_2026"
 			        }
 			      },
@@ -1517,7 +1517,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_1_hab_centro_ML": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 1 hab centro ML"
 			        }
 			      },
@@ -1533,7 +1533,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_1_hab_fuera_ML": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 1 hab fuera ML"
 			        }
 			      },
@@ -1549,7 +1549,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_3_hab_centro_ML": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 3 hab centro ML"
 			        }
 			      },
@@ -1565,7 +1565,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_3_hab_fuera_ML": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 3 hab fuera ML"
 			        }
 			      },
@@ -1581,7 +1581,7 @@ cultureInfo es-MX
 			    "datos_limpio.compra_m2_centro__ML": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Compra m^2 centro  ML"
 			        }
 			      },
@@ -1603,7 +1603,7 @@ cultureInfo es-MX
 			    "datos_limpio.compra_m2_fuera_ML": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Compra m^2 fuera ML"
 			        }
 			      },
@@ -1619,7 +1619,7 @@ cultureInfo es-MX
 			    "datos_limpio.salario_neto_mensual_promedio_ML": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Salario neto mensual promedio ML"
 			        }
 			      },
@@ -1635,7 +1635,7 @@ cultureInfo es-MX
 			    "datos_limpio.ciudad__país": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Ciudad - País"
 			        }
 			      },
@@ -1657,7 +1657,7 @@ cultureInfo es-MX
 			    "datos_limpio.city_country_key": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "CityCountryKey"
 			        }
 			      },
@@ -1792,7 +1792,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_1_habitación_centro_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 1 habitación centro USD"
 			        }
 			      },
@@ -1808,7 +1808,7 @@ cultureInfo es-MX
 			    "datos_limpio.salario_neto_mensual_en_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Salario neto mensual en USD"
 			        }
 			      },
@@ -1824,7 +1824,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_1_hab___salario_centro_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 1 hab / salario centro USD"
 			        }
 			      },
@@ -1868,7 +1868,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_1_hab_fuera_del_centro_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 1 hab fuera del centro USD"
 			        }
 			      },
@@ -1884,7 +1884,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_1_hab___salario_fuera_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 1 hab / salario fuera USD"
 			        }
 			      },
@@ -1928,7 +1928,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_1_hab_centro_moneda_local": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 1 hab centro moneda local"
 			        }
 			      },
@@ -1944,7 +1944,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_1_hab_fuera_moneda_local": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 1 hab fuera moneda local"
 			        }
 			      },
@@ -1960,7 +1960,7 @@ cultureInfo es-MX
 			    "datos_limpio.salario_neto_mensual_moneda_local": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Salario neto mensual moneda local"
 			        }
 			      },
@@ -1976,7 +1976,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_1_hab___salario_centro_local": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 1 hab / salario centro local"
 			        }
 			      },
@@ -2010,7 +2010,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_1_hab___salario_fuera_local": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 1 hab / salario fuera local"
 			        }
 			      },
@@ -2044,7 +2044,7 @@ cultureInfo es-MX
 			    "datos_limpio.renta_3_habitaciones_fuera_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Renta 3 habitaciones fuera USD"
 			        }
 			      },
@@ -2060,7 +2060,7 @@ cultureInfo es-MX
 			    "datos_limpio.carga_3_hab_centro": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Carga 3 hab centro"
 			        }
 			      },
@@ -2076,7 +2076,7 @@ cultureInfo es-MX
 			    "datos_limpio.carga_3_hab_fuera": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Carga 3 hab fuera"
 			        }
 			      },
@@ -2092,7 +2092,7 @@ cultureInfo es-MX
 			    "datos_limpio.precio_compra_centro_m2_MXM": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Precio compra centro m2 MXM"
 			        }
 			      },
@@ -2108,7 +2108,7 @@ cultureInfo es-MX
 			    "datos_limpio.precio_compra_fuera_m2_MXM": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Precio compra fuera m2 MXM"
 			        }
 			      },
@@ -2124,7 +2124,7 @@ cultureInfo es-MX
 			    "datos_limpio.carga_de_renta_centro_seleccionada_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Carga de renta centro seleccionada USD"
 			        }
 			      },
@@ -2140,7 +2140,7 @@ cultureInfo es-MX
 			    "datos_limpio.carga_de_renta_fuera_seleccionada_USD": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Datos_limpios",
+			          "ConceptualEntity": "Costo_de_vida_limpio",
 			          "ConceptualProperty": "Carga de renta fuera seleccionada USD"
 			        }
 			      },
@@ -6669,7 +6669,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_selector_habitacion_renta_centro_seleccionada_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -6735,7 +6735,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_selector_habitacion_renta_fuera_seleccionada_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -6801,7 +6801,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_selector_habitacion_renta_fuera_seleccionada_MXM": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -6867,7 +6867,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_selector_habitacion_renta_centro_seleccionada_MXM": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -6966,7 +6966,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_carga_de_renta_fuera_seleccionada_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7032,7 +7032,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_carga_de_renta_centro_seleccionada_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7065,7 +7065,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_precio_compra_fuera_m2_MXM": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7098,7 +7098,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_precio_compra_centro_m2_MXM": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7131,7 +7131,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_carga_3_hab_fuera": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7164,7 +7164,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_carga_3_hab_centro": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7197,7 +7197,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_3_habitaciones_fuera_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7230,7 +7230,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_1_hab___salario_fuera_local": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7263,7 +7263,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_1_hab___salario_centro_local": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7296,7 +7296,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_salario_neto_mensual_moneda_local": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7329,7 +7329,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_1_hab_fuera_moneda_local": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7362,7 +7362,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_1_hab_centro_moneda_local": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7395,7 +7395,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_1_hab___salario_fuera_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7428,7 +7428,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_1_hab_fuera_del_centro_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7461,7 +7461,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_1_hab___salario_centro_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7494,7 +7494,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_salario_neto_mensual_en_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7527,7 +7527,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_1_habitación_centro_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7560,7 +7560,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_city_country_key": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7593,7 +7593,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_ciudad__país": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7626,7 +7626,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_salario_neto_mensual_promedio_ML": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7659,7 +7659,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_compra_m2_fuera_ML": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7692,7 +7692,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_compra_m2_centro__ML": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7725,7 +7725,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_3_hab_fuera_ML": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7758,7 +7758,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_3_hab_centro_ML": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7791,7 +7791,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_1_hab_fuera_ML": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7824,7 +7824,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_1_hab_centro_ML": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7857,7 +7857,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_x_55_2026": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7890,7 +7890,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_salario_neto_mensual_promedio_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7923,7 +7923,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_compra_m2_fuera_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7956,7 +7956,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_compra_m2_centro_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -7989,7 +7989,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_3_hab_fuera_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8022,7 +8022,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_3_hab_centro_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8055,7 +8055,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_1_hab_fuera_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8088,7 +8088,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_1_hab_centro_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8121,7 +8121,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_fx_factor_sep_2022_sep_2026": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8154,7 +8154,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_fx_sep_2026_LCU_per_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8187,7 +8187,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_fx_sep_2022_LCU_per_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8220,7 +8220,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_inflation_pct_sep_2022_sep_2026": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8253,7 +8253,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_inflation_factor_sep_2022_sep_2026": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8286,7 +8286,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_CPI_sep_2026": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8319,7 +8319,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_CPI_sep_2022": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8352,7 +8352,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_monthly_FX_status": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8385,7 +8385,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_monthly_CPI_status": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8418,7 +8418,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_country_link_status": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8451,7 +8451,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_IMF_country_code": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8484,7 +8484,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_data_quality": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8517,7 +8517,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_x_55": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8550,7 +8550,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_x_54": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8583,7 +8583,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_x_53": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8616,7 +8616,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_x_52": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8649,7 +8649,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_x_51": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8682,7 +8682,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_x_50": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8715,7 +8715,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_x_49": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8748,7 +8748,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_x_48": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8781,7 +8781,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_country": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8814,7 +8814,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_city": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8847,7 +8847,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_source_row_id": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8880,7 +8880,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_has_renta_3_habitaciones_centro_USD": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -9003,7 +9003,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_in_city_country_key": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -9048,7 +9048,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_in_country_link_status": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -9093,7 +9093,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_in_IMF_country_code": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -9138,7 +9138,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_in_country": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -9183,7 +9183,7 @@ cultureInfo es-MX
 			    },
 			    "datos_limpio_in_city": {
 			      "Binding": {
-			        "ConceptualEntity": "Datos_limpios"
+			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
