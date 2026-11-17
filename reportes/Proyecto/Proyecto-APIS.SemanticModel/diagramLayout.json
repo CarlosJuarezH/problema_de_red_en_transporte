@@ -10,8 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 351.42857142857144,
-            "y": 122.85714285714286
+            "x": 25.714285714285722,
+            "y": 0
           },
           "nodeIndex": "Datos_limpios",
           "nodeLineageTag": "8ac0c2be-45b6-4e73-b5e5-42021a7c9e15",
@@ -23,8 +23,8 @@
         },
         {
           "location": {
-            "x": 347.42857142857133,
-            "y": 461.4285714285715
+            "x": 0,
+            "y": 396.60714285714289
           },
           "nodeIndex": "SelectorHabitacion",
           "nodeLineageTag": "dce20fb3-9fed-4ff0-adc2-e4a397b8b5e3",
@@ -36,8 +36,8 @@
         },
         {
           "location": {
-            "x": 834.28571428571433,
-            "y": 116.07142857142857
+            "x": 761.42857142857156,
+            "y": 0
           },
           "nodeIndex": "Airbnb_CDMX",
           "nodeLineageTag": "c1d001ec-9eb8-4899-9f6f-28dad42958b3",
@@ -46,6 +46,45 @@
             "width": 234
           },
           "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 442.28571428571411,
+            "y": 417.85714285714289
+          },
+          "nodeIndex": "INEGI",
+          "nodeLineageTag": "ad987a0f-fbe9-4e8a-abb5-605ee92705e0",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 373.42857142857133,
+            "y": 135.16071428571428
+          },
+          "nodeIndex": "DimCiudadPais",
+          "nodeLineageTag": "b869d7ae-d52b-47a7-b239-8c9922730f2b",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 850.57142857142833,
+            "y": 462.3035714285715
+          },
+          "nodeIndex": "DimGeografia",
+          "nodeLineageTag": "d0d4b823-8361-43f6-8abf-dadcde210e93",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas las tablas",

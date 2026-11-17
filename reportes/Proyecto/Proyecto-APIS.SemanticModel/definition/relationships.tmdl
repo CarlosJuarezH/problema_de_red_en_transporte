@@ -13,7 +13,17 @@ relationship 41f24319-a015-40e6-bd5d-0cb843d0b70e
 	fromColumn: Airbnb_CDMX.fecha_recoleccion
 	toColumn: LocalDateTable_018c92dd-5c12-4306-9322-3014203a5e1b.Date
 
-relationship 3fed14dc-287b-1460-dcf8-e16e2871a2b4
-	fromColumn: Airbnb_CDMX.CityCountryKey
+relationship AutoDetected_e793593e-0220-4a62-93b1-fe9b9607eac5
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: DimCiudadPais.CityCountryKey
 	toColumn: Datos_limpios.CityCountryKey
+
+relationship d645e707-4b8f-35da-2d47-bc030d0d2906
+	fromColumn: Airbnb_CDMX.CityCountryKey
+	toColumn: DimCiudadPais.CityCountryKey
+
+relationship AutoDetected_433c7b12-a29e-456c-9c1e-5d2b4ef7d1e9
+	fromColumn: INEGI.geography_code
+	toColumn: DimGeografia.geography_code
 

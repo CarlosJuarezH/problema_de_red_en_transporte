@@ -1,0 +1,41 @@
+table DimGeografia
+	lineageTag: d0d4b823-8361-43f6-8abf-dadcde210e93
+
+	column geography_code
+		dataType: string
+		lineageTag: 577166de-788a-4f5f-81e7-c88b8ecd9874
+		summarizeBy: none
+		sourceColumn: geography_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column geography_name
+		dataType: string
+		lineageTag: dbdfa5cb-f15a-41cd-bd13-b4b2ba19ec16
+		summarizeBy: none
+		sourceColumn: geography_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column geography_level
+		dataType: string
+		lineageTag: 0fbcc16a-2df7-421c-99b7-c580637d3464
+		summarizeBy: none
+		sourceColumn: geography_level
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimGeografia = m
+		mode: import
+		source =
+				let
+				    Origen = INEGI,
+				    #"Otras columnas quitadas" = Table.SelectColumns(Origen,{"geography_code", "geography_name", "geography_level"}),
+				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas", {"geography_code"})
+				in
+				    #"Duplicados quitados"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

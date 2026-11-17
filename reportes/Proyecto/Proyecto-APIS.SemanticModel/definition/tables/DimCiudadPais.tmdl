@@ -1,0 +1,41 @@
+table DimCiudadPais
+	lineageTag: b869d7ae-d52b-47a7-b239-8c9922730f2b
+
+	column city
+		dataType: string
+		lineageTag: e8949a64-841f-4760-b80b-407d670911bd
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		lineageTag: 4d4aafd7-2a17-461f-b2c4-6fe51986d41c
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column CityCountryKey
+		dataType: string
+		lineageTag: 83f77875-6bb1-43fe-adf4-9762025c8623
+		summarizeBy: none
+		sourceColumn: CityCountryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimCiudadPais = m
+		mode: import
+		source =
+				let
+				    Origen = Datos_limpios,
+				    #"Otras columnas quitadas" = Table.SelectColumns(Origen,{"city", "country", "CityCountryKey"}),
+				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas", {"CityCountryKey"})
+				in
+				    #"Duplicados quitados"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

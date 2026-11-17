@@ -9,7 +9,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Datos_limpios","Airbnb_CDMX"]
+annotation PBI_QueryOrder = ["Datos_limpios","Airbnb_CDMX","pRutaProyecto","INEGI","DimCiudadPais","DimGeografia"]
 
 annotation PBI_ProTooling = ["DaxQueryView_Desktop","DevMode"]
 
@@ -20,6 +20,9 @@ ref table DateTableTemplate_8871da95-4e5b-4c41-96a0-3596eedfcacf
 ref table LocalDateTable_e4165ee6-28fc-45dd-a27d-fcca7a0894de
 ref table LocalDateTable_c707096a-3a2f-4791-a1c7-eda2a78100c5
 ref table LocalDateTable_018c92dd-5c12-4306-9322-3014203a5e1b
+ref table INEGI
+ref table DimCiudadPais
+ref table DimGeografia
 
 ref cultureInfo es-MX
 

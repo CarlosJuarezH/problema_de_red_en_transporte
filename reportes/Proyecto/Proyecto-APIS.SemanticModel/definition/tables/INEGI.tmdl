@@ -1,0 +1,175 @@
+table INEGI
+	lineageTag: ad987a0f-fbe9-4e8a-abb5-605ee92705e0
+
+	column indicator_id
+		dataType: string
+		lineageTag: 714e29dd-364e-41d5-8cd9-9d0c3c797622
+		summarizeBy: none
+		sourceColumn: indicator_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column indicator_name
+		dataType: string
+		lineageTag: 4e78e722-8ba1-45ea-895c-68869e3e851c
+		summarizeBy: none
+		sourceColumn: indicator_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column period
+		dataType: int64
+		formatString: 0
+		lineageTag: ed87bcf4-90ef-4d0a-b10c-a036ccc2b15f
+		summarizeBy: sum
+		sourceColumn: period
+
+		annotation SummarizationSetBy = Automatic
+
+	column value_raw
+		dataType: string
+		lineageTag: 30c760c9-8ceb-499b-9827-ef4d6a8c8c35
+		summarizeBy: none
+		sourceColumn: value_raw
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit_code
+		dataType: string
+		lineageTag: 69436cf5-e149-4623-a575-18a15058ffc9
+		summarizeBy: none
+		sourceColumn: unit_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column frequency_code
+		dataType: string
+		lineageTag: efd7c4d5-d46d-4882-ab29-f8a2071f902e
+		summarizeBy: none
+		sourceColumn: frequency_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column topic_code
+		dataType: string
+		lineageTag: 19aa24d2-a96b-470e-8869-841a0a70ba3d
+		summarizeBy: none
+		sourceColumn: topic_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column geography_code
+		dataType: string
+		lineageTag: 20b1799c-6b6c-4237-b969-461aab24eab1
+		summarizeBy: none
+		sourceColumn: geography_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column geography_name
+		dataType: string
+		lineageTag: b7bfac76-dba1-45ff-8bd9-0e9dc1ee573a
+		summarizeBy: none
+		sourceColumn: geography_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column geography_level
+		dataType: string
+		lineageTag: a2860050-455d-4f9b-bb01-4658c77622a0
+		summarizeBy: none
+		sourceColumn: geography_level
+
+		annotation SummarizationSetBy = Automatic
+
+	column requested_geography_code
+		dataType: string
+		lineageTag: 5028c061-1a24-48a5-bf07-780f3150236f
+		summarizeBy: none
+		sourceColumn: requested_geography_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column series_source_code
+		dataType: string
+		lineageTag: cccbe62f-1a4d-4cc6-961e-2c8c56113419
+		summarizeBy: none
+		sourceColumn: series_source_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column series_last_update
+		dataType: string
+		lineageTag: 5bf9026f-8e00-4e67-aa26-2279ac33f121
+		summarizeBy: none
+		sourceColumn: series_last_update
+
+		annotation SummarizationSetBy = Automatic
+
+	column series_note_code
+		dataType: string
+		lineageTag: 4d3ebb5e-e565-4799-bcf1-95747e340436
+		summarizeBy: none
+		sourceColumn: series_note_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column observation_status
+		dataType: string
+		lineageTag: 77f6b10b-d126-4353-8a83-c3cae985f7e3
+		summarizeBy: none
+		sourceColumn: observation_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column observation_exception
+		dataType: string
+		lineageTag: 8098d2f5-fad6-4019-9852-383b56d72297
+		summarizeBy: none
+		sourceColumn: observation_exception
+
+		annotation SummarizationSetBy = Automatic
+
+	column observation_source
+		dataType: string
+		lineageTag: 77d6f62f-50d0-404f-b99e-ba831a27b3dd
+		summarizeBy: none
+		sourceColumn: observation_source
+
+		annotation SummarizationSetBy = Automatic
+
+	column observation_note
+		dataType: string
+		lineageTag: b51df7c6-ea56-4a19-a161-38e2d3ba93bb
+		summarizeBy: none
+		sourceColumn: observation_note
+
+		annotation SummarizationSetBy = Automatic
+
+	column value
+		dataType: double
+		lineageTag: 7fd518e8-0788-4db1-bf0e-51e935734b2b
+		summarizeBy: sum
+		sourceColumn: value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition INEGI = m
+		mode: import
+		source =
+				let
+				    Origen = Parquet.Document(
+				        File.Contents(
+				            pRutaProyecto & "data\processed\inegi_cdmx_20261117T025258Z.parquet"
+				        )
+				    ),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"value_raw", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

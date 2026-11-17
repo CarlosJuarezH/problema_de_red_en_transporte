@@ -1,0 +1,8 @@
+/// Ruta raíz local del repositorio.
+expression pRutaProyecto = "C:\Users\Carlo\OneDrive\Escritorio\Documents\Maestría\AGO-DIC 2026\Cómputo científico\GitHub\problema_de_red_en_transporte\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 3937d1e0-614d-4d94-8cdb-245307c72101
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Text
+
