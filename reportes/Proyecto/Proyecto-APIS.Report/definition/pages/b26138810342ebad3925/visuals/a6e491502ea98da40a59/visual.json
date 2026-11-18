@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "a6e491502ea98da40a59",
   "position": {
-    "x": 22,
-    "y": 208,
+    "x": 22.6415852861857,
+    "y": 207.89091944588685,
     "z": 5000,
-    "height": 446,
-    "width": 1134,
+    "height": 403.431883281127,
+    "width": 1134.1375902443926,
     "tabOrder": 5000
   },
   "visual": {
@@ -161,7 +161,7 @@
             "zoom": {
               "expr": {
                 "Literal": {
-                  "Value": "9.09D"
+                  "Value": "8.88D"
                 }
               }
             },
@@ -412,5 +412,132 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9d911c23ea7b33864e15",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Airbnb_CDMX"
+                  }
+                },
+                "Property": "listing_id"
+              }
+            },
+            "Function": 2
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6dac31201de193c6401e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Airbnb_CDMX"
+                  }
+                },
+                "Property": "categoria_anfitrion_cdmx"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6fb6556daca35b088560",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Airbnb_CDMX"
+                  }
+                },
+                "Property": "tipo_habitacion"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a3f6097eb17e740a60b0",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Airbnb_CDMX"
+                  }
+                },
+                "Property": "precio_noche_mxn"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e27fa83e7ba80311d54e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Airbnb_CDMX"
+                  }
+                },
+                "Property": "alcaldia"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d862b162bb6b1e7dd467",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Airbnb_CDMX"
+              }
+            },
+            "Property": "longitud"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1d5e58795c59dbc3a82c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Airbnb_CDMX"
+              }
+            },
+            "Property": "latitud"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

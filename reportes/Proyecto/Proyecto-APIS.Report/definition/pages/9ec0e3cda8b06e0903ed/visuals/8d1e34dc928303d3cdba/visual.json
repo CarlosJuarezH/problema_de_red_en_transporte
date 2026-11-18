@@ -103,14 +103,14 @@
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
-                  "Value": "1000D"
+                  "Value": "1D"
                 }
               }
             },
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "1L"
+                  "Value": "0L"
                 }
               }
             },
@@ -143,6 +143,27 @@
               "expr": {
                 "Literal": {
                   "Value": "3D"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Salario neto mensual promedio (USD)'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }
@@ -239,6 +260,13 @@
                   "Value": "11500D"
                 }
               }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
             }
           }
         }
@@ -294,7 +322,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Salario neto y renta mensual fuera del  centro de la ciudad'"
+                  "Value": "'Fuera del centro se observa una relación similar'"
                 }
               }
             },
@@ -463,6 +491,62 @@
             }
           ]
         }
+      },
+      {
+        "name": "496f744315995e824a07",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "Ciudad - País"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e665907043905036560a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "Carga de renta fuera seleccionada USD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f58f65f67bbcc4aa89c6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "Salario neto mensual en USD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7685caf168d30908be42",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SelectorHabitacion"
+              }
+            },
+            "Property": "Renta fuera seleccionada USD"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

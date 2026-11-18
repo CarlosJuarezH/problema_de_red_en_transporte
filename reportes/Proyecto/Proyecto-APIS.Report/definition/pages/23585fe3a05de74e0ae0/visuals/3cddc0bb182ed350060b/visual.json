@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "3cddc0bb182ed350060b",
   "position": {
-    "x": 38.333333333333336,
-    "y": 603.33333333333337,
+    "x": 37.499999999999993,
+    "y": 601.78571428571422,
     "z": 4000,
-    "height": 420,
-    "width": 922,
+    "height": 421.42857142857139,
+    "width": 923.21428571428567,
     "tabOrder": 4000
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -45,7 +45,7 @@
                   "Property": "Salario neto mensual moneda local"
                 }
               },
-              "queryRef": "Datos_limpios.Salario neto mensual moneda local",
+              "queryRef": "Costo_de_vida_limpio.Salario neto mensual moneda local",
               "nativeQueryRef": "Salario neto mensual moneda local"
             }
           ]
@@ -80,6 +80,34 @@
                   "Value": "true"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            },
+            "enableTitleDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -98,6 +126,47 @@
               "expr": {
                 "Literal": {
                   "Value": "'Ciudad'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Salario neto mensual estimado (MXN)'"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }
@@ -184,7 +253,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Salario neto individual - MXN/mes'"
+                  "Value": "'Salario neto mensual promedio estimado por ciudad-MXN/mes.'"
                 }
               }
             }

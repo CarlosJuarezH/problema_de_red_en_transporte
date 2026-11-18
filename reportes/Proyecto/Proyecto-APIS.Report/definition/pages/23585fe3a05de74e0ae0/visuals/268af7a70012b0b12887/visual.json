@@ -46,8 +46,8 @@
                 }
               },
               "queryRef": "Datos_limpios.Renta 1 hab / salario centro USD",
-              "nativeQueryRef": "Renta 1 hab / salario centro",
-              "displayName": "Renta 1 hab / salario centro"
+              "nativeQueryRef": "Carga centro (%)",
+              "displayName": "Carga centro (%)"
             },
             {
               "field": {
@@ -61,8 +61,8 @@
                 }
               },
               "queryRef": "Datos_limpios.Renta 1 hab / salario fuera USD",
-              "nativeQueryRef": "Renta 1 hab / salario fuera ",
-              "displayName": "Renta 1 hab / salario fuera "
+              "nativeQueryRef": "Carga fuera del centro (%)",
+              "displayName": "Carga fuera del centro (%)"
             }
           ]
         }

@@ -10,7 +10,7 @@
     "tabOrder": 3000
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "barChart",
     "query": {
       "queryState": {
         "Category": {
@@ -42,24 +42,10 @@
                       "Entity": "Costo_de_vida_limpio"
                     }
                   },
-                  "Property": "Precio compra centro m2 MXM"
-                }
-              },
-              "queryRef": "Datos_limpios.Precio compra centro m2 MXM",
-              "nativeQueryRef": "Precio compra centro m2 MXM"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Costo_de_vida_limpio"
-                    }
-                  },
                   "Property": "Precio compra fuera m2 MXM"
                 }
               },
-              "queryRef": "Datos_limpios.Precio compra fuera m2 MXM",
+              "queryRef": "Costo_de_vida_limpio.Precio compra fuera m2 MXM",
               "nativeQueryRef": "Precio compra fuera m2 MXM"
             }
           ]
@@ -75,7 +61,7 @@
                     "Entity": "Costo_de_vida_limpio"
                   }
                 },
-                "Property": "Precio compra centro m2 MXM"
+                "Property": "Precio compra fuera m2 MXM"
               }
             },
             "direction": "Descending"
@@ -92,6 +78,27 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
                 }
               }
             }
@@ -114,6 +121,20 @@
                   "Value": "'Ciudad'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
             }
           }
         }
@@ -131,7 +152,35 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Precio de comprar un m2 en MXM'"
+                  "Value": "'Precio de comprar un  m² (MXN)'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }

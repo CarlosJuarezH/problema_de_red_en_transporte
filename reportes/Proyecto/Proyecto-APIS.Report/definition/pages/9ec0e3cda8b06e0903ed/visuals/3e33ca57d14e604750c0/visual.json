@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "3e33ca57d14e604750c0",
   "position": {
-    "x": 980.83623510930749,
+    "x": 41.62220185888205,
     "y": 573.66252127241785,
     "z": 5000,
     "height": 457.84422044770258,
-    "width": 895.78217044115718,
+    "width": 1834.9962036915827,
     "tabOrder": 5000
   },
   "visual": {
@@ -46,7 +46,8 @@
                 }
               },
               "queryRef": "Datos_limpios.Carga de renta centro seleccionada USD",
-              "nativeQueryRef": "Carga de renta centro seleccionada USD"
+              "nativeQueryRef": "Carga de renta en el centro (%)",
+              "displayName": "Carga de renta en el centro (%)"
             },
             {
               "field": {
@@ -60,7 +61,8 @@
                 }
               },
               "queryRef": "Datos_limpios.Carga de renta fuera seleccionada USD",
-              "nativeQueryRef": "Carga de renta fuera seleccionada USD"
+              "nativeQueryRef": "Carga de renta fuera del centro (%)",
+              "displayName": "Carga de renta fuera del centro (%)"
             }
           ]
         }
@@ -101,6 +103,20 @@
                   "Value": "'Ciudades'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
             }
           }
         }
@@ -118,7 +134,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Carga de renta'"
+                  "Value": "'Carga de renta (%)'"
                 }
               }
             },
@@ -142,7 +158,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": 0
+                      "Percent": -0.3
                     }
                   }
                 }
@@ -151,7 +167,28 @@
             "gridlineShow": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "gridlineThickness": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }
@@ -199,6 +236,41 @@
                   }
                 }
               }
+            },
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'OutsideEnd'"
+                }
+              }
             }
           }
         }
@@ -209,7 +281,35 @@
             "showTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
                 }
               }
             }
@@ -228,6 +328,33 @@
             }
           }
         }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "borderColorMatchFill": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "borderSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -237,7 +364,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'CDMX registra la mayor carga de renta entre las ciudades comparadas'"
+                  "Value": "'10 ciudades con mayor carga estimada de renta en el centro de la ciudad'"
                 }
               }
             },
@@ -335,7 +462,20 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Renta como proporción del salario neto mensual.'"
+                  "Value": "'Comparación de la renta mensual estimada con el salario neto mensual promedio por ciudad; Tipo de renta según el selector'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -360,11 +500,115 @@
           }
         },
         "type": "Categorical",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "c082ec6c4665504ea422",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "Carga de renta centro seleccionada USD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "15418a91264e0a48418d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "Carga de renta fuera seleccionada USD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c5e495599470bc6a8042",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "CityCountryKey"
+          }
+        },
+        "type": "TopN",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "d",
+              "Name": "subquery",
+              "Expression": {
+                "Subquery": {
+                  "Query": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "Costo_de_vida_limpio",
+                        "Type": 0
+                      }
+                    ],
+                    "Select": [
+                      {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "c"
+                            }
+                          },
+                          "Property": "CityCountryKey"
+                        },
+                        "Name": "field"
+                      }
+                    ],
+                    "OrderBy": [
+                      {
+                        "Direction": 2,
+                        "Expression": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "c"
+                              }
+                            },
+                            "Property": "Carga de renta centro seleccionada USD"
+                          }
+                        }
+                      }
+                    ],
+                    "Top": 10
+                  }
+                }
+              },
+              "Type": 2
+            },
+            {
+              "Name": "c",
               "Entity": "Costo_de_vida_limpio",
               "Type": 0
             }
@@ -378,105 +622,24 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "d"
+                            "Source": "c"
                           }
                         },
-                        "Property": "Ciudad - País"
+                        "Property": "CityCountryKey"
                       }
                     }
                   ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Benoni, South Africa'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'New York, United States'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Singapore, Singapore'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Miami, United States'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Los Angeles, United States'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'London, United Kingdom'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Copenhagen, Denmark'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Liverpool, United Kingdom'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Seoul, South Korea'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Tokyo, Japan'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Valparaiso, Chile'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Mexico City, Mexico'"
-                        }
-                      }
-                    ]
-                  ]
+                  "Table": {
+                    "SourceRef": {
+                      "Source": "subquery"
+                    }
+                  }
                 }
               }
             }
           ]
         },
-        "isLockedInViewMode": true
+        "howCreated": "User"
       }
     ]
   }

@@ -49,11 +49,6 @@
   "visualInteractions": [
     {
       "source": "1081f2486ce098d5a318",
-      "target": "1950cd306ad470be3345",
-      "type": "NoFilter"
-    },
-    {
-      "source": "1081f2486ce098d5a318",
       "target": "3e33ca57d14e604750c0",
       "type": "NoFilter"
     }

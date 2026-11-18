@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "1081f2486ce098d5a318",
   "position": {
-    "x": 1636,
-    "y": 26,
+    "x": 1636.3691184106935,
+    "y": 26.758237156401279,
     "z": 1000,
-    "height": 112,
-    "width": 240,
+    "height": 111.14960049582069,
+    "width": 238.76580847250372,
     "tabOrder": 1000
   },
   "visual": {
@@ -253,5 +253,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "77e86f48cd5e9e6220a8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "country"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

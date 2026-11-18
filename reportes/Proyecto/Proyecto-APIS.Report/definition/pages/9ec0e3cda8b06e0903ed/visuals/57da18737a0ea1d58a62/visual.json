@@ -103,14 +103,14 @@
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
-                  "Value": "1000D"
+                  "Value": "1D"
                 }
               }
             },
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "1L"
+                  "Value": "0L"
                 }
               }
             },
@@ -130,6 +130,48 @@
               "expr": {
                 "Literal": {
                   "Value": "10000D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "treatNullsAsZero": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Salario neto mensual promedio (USD)'"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }
@@ -199,6 +241,13 @@
                   "Value": "11500D"
                 }
               }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
             }
           }
         }
@@ -224,7 +273,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Salario neto y renta mensual en el centro de la ciudad'"
+                  "Value": "'En general, las ciudades con salarios más altos también presentan rentas más altas'"
                 }
               }
             },
@@ -412,6 +461,62 @@
             }
           ]
         }
+      },
+      {
+        "name": "c39ceb511aa504db9e4a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "Ciudad - País"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c81fd22d79ba096d06de",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "Carga de renta centro seleccionada USD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "284dae00c00c83aa01c6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "Salario neto mensual en USD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2d4c6d8229bd00183600",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SelectorHabitacion"
+              }
+            },
+            "Property": "Renta centro seleccionada USD"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
