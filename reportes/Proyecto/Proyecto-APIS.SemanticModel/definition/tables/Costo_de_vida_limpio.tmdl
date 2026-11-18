@@ -307,156 +307,6 @@ table Costo_de_vida_limpio
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column 'Renta 1 hab centro USD'
-		dataType: double
-		lineageTag: b0b543ba-13c2-4b19-bdc6-60d11441dfea
-		summarizeBy: sum
-		sourceColumn: Renta 1 hab centro USD
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'Renta 1 hab fuera USD'
-		dataType: double
-		lineageTag: 12e9c0ed-ad4c-4157-804f-bc90adf0e966
-		summarizeBy: sum
-		sourceColumn: Renta 1 hab fuera USD
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'Renta 3 hab centro USD'
-		dataType: double
-		lineageTag: aee6de2a-dbf6-4fcc-9b48-ab6adb74ed1e
-		summarizeBy: sum
-		sourceColumn: Renta 3 hab centro USD
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'Renta 3 hab fuera USD'
-		dataType: double
-		lineageTag: 796fa612-4553-46c6-aedf-e5df8e705f75
-		summarizeBy: sum
-		sourceColumn: Renta 3 hab fuera USD
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'Compra m^2 centro USD'
-		dataType: double
-		lineageTag: 117f8db7-674d-49d0-89ee-ce952a38954e
-		summarizeBy: sum
-		sourceColumn: Compra m^2 centro USD
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'Compra m^2 fuera USD'
-		dataType: double
-		lineageTag: e96dc85e-7d5b-4238-ab35-444b184a7dd3
-		summarizeBy: sum
-		sourceColumn: Compra m^2 fuera USD
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'Salario neto mensual promedio USD'
-		dataType: double
-		lineageTag: 276a5487-da84-4020-8ef8-638a2c314e07
-		summarizeBy: sum
-		sourceColumn: Salario neto mensual promedio USD
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column x55_2026
-		dataType: double
-		lineageTag: 1b9b4302-9a3c-454e-a575-00ba9b3e0c1e
-		summarizeBy: sum
-		sourceColumn: x55_2026
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'Renta 1 hab centro ML'
-		dataType: double
-		lineageTag: d6045ca8-d267-4a25-8f70-386f2d75b68c
-		summarizeBy: sum
-		sourceColumn: Renta 1 hab centro ML
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'Renta 1 hab fuera ML'
-		dataType: double
-		lineageTag: 02928d8a-ecc7-4df9-972b-c7d3303b7766
-		summarizeBy: sum
-		sourceColumn: Renta 1 hab fuera ML
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'Renta 3 hab centro ML'
-		dataType: double
-		lineageTag: a9ce8e97-b7b6-4995-b20e-eeca26f8d0a1
-		summarizeBy: sum
-		sourceColumn: Renta 3 hab centro ML
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'Renta 3 hab fuera ML'
-		dataType: double
-		lineageTag: 8076af95-c872-4f1c-bfb1-83311bef2d3b
-		summarizeBy: sum
-		sourceColumn: Renta 3 hab fuera ML
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'Compra m^2 centro  ML'
-		dataType: double
-		lineageTag: b43cc87f-456b-492d-adad-a8cc98676c4d
-		summarizeBy: sum
-		sourceColumn: Compra m^2 centro  ML
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'Compra m^2 fuera ML'
-		dataType: double
-		lineageTag: deb126f6-fb35-49da-a32a-f6d9be6874c1
-		summarizeBy: sum
-		sourceColumn: Compra m^2 fuera ML
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'Salario neto mensual promedio ML'
-		dataType: double
-		lineageTag: 09cfd9c2-c66c-4bfc-a3a4-31758ffc7806
-		summarizeBy: sum
-		sourceColumn: Salario neto mensual promedio ML
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column 'Ciudad - País' = 'Costo_de_vida_limpio'[city]&", "& Costo_de_vida_limpio[country]
 		lineageTag: 405ecad4-1b65-445e-a455-d036f6ea9deb
 		summarizeBy: none
@@ -471,18 +321,168 @@ table Costo_de_vida_limpio
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Renta 1 hab centro USD'
+		dataType: double
+		lineageTag: bd6c3d00-f7f6-4520-8920-f6f7c7a4f636
+		summarizeBy: sum
+		sourceColumn: Renta 1 hab centro USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Renta 1 hab fuera USD'
+		dataType: double
+		lineageTag: 028f1f17-36ac-4f46-8aee-a29aa6be988f
+		summarizeBy: sum
+		sourceColumn: Renta 1 hab fuera USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Renta 3 hab centro USD'
+		dataType: double
+		lineageTag: 71f9e4e0-44c5-49c7-a9a3-459785a94d91
+		summarizeBy: sum
+		sourceColumn: Renta 3 hab centro USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Renta 3 hab fuera USD'
+		dataType: double
+		lineageTag: f79f309b-dee3-4e5e-82c7-d0d0de0709a1
+		summarizeBy: sum
+		sourceColumn: Renta 3 hab fuera USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Compra m^2 centro USD'
+		dataType: double
+		lineageTag: 31cb8f88-f7f7-4385-a1ce-b8bfcae1cc68
+		summarizeBy: sum
+		sourceColumn: Compra m^2 centro USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Compra m^2 fuera USD'
+		dataType: double
+		lineageTag: 5cfff414-de15-4815-94eb-8fc7a12e31a7
+		summarizeBy: sum
+		sourceColumn: Compra m^2 fuera USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Salario neto mensual promedio USD'
+		dataType: double
+		lineageTag: d7e7e7e6-1130-4e5b-9521-3b1c5423755b
+		summarizeBy: sum
+		sourceColumn: Salario neto mensual promedio USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Tipo de interés hipotecario en porcentajes (%), anual'
+		dataType: double
+		lineageTag: d7d066f8-6bb0-4103-a139-756b013086b5
+		summarizeBy: sum
+		sourceColumn: Tipo de interés hipotecario en porcentajes (%), anual
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Renta 1 hab centro ML'
+		dataType: double
+		lineageTag: 047c9f5e-2730-4526-be41-9c49e7f55db7
+		summarizeBy: sum
+		sourceColumn: Renta 1 hab centro ML
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Renta 1 hab fuera ML'
+		dataType: double
+		lineageTag: e9c8be74-90e5-4f13-a5ea-15dbcdf4f7d0
+		summarizeBy: sum
+		sourceColumn: Renta 1 hab fuera ML
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Renta 3 hab centro ML'
+		dataType: double
+		lineageTag: 2d865db7-c1ab-4ff0-9afd-bc391efa504f
+		summarizeBy: sum
+		sourceColumn: Renta 3 hab centro ML
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Renta 3 hab fuera ML'
+		dataType: double
+		lineageTag: 53c1769b-2887-453a-8881-057cd09c7fd1
+		summarizeBy: sum
+		sourceColumn: Renta 3 hab fuera ML
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Compra m^2 centro ML'
+		dataType: double
+		lineageTag: 220c57bd-cc82-4014-9421-35676a878b10
+		summarizeBy: sum
+		sourceColumn: Compra m^2 centro ML
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Compra m^2 fuera ML'
+		dataType: double
+		lineageTag: 79377305-521d-4239-a57a-eb15f505d01e
+		summarizeBy: sum
+		sourceColumn: Compra m^2 fuera ML
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Salario neto mensual promedio ML'
+		dataType: double
+		lineageTag: 8ab1d3db-2c60-43f4-9b2b-712545a0cd56
+		summarizeBy: sum
+		sourceColumn: Salario neto mensual promedio ML
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Costo_de_vida_limpio = m
 		mode: import
 		source =
 				let
-				    Origen = Excel.Workbook(File.Contents("C:\Users\Carlo\OneDrive\Escritorio\Documents\Maestría\Semestre\AGO-DIC 2026\Cómputo científico\Proyecto\Datos limpios\cost-of-living_2026_limpio.xlsx"), null, true),
+				    Origen = Excel.Workbook(File.Contents(pRutaProyecto & "data\processed\Costo_de_vida_limpio.xlsx"), null, true),
 				    Datos_limpios_Sheet = Origen{[Item="Datos_limpios",Kind="Sheet"]}[Data],
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Datos_limpios_Sheet, [PromoteAllScalars=true]),
-				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"source_row_id", Int64.Type}, {"city", type text}, {"country", type text}, {"x48", type number}, {"x49", type number}, {"x50", type number}, {"x51", type number}, {"x52", type number}, {"x53", type number}, {"x54", type number}, {"x55", type number}, {"data_quality", Int64.Type}, {"IMF_country_code", type text}, {"country_link_status", type text}, {"monthly_CPI_status", type text}, {"monthly_FX_status", type text}, {"CPI_Sep2022", type number}, {"CPI_Sep2026", type number}, {"inflation_factor_Sep2022_Sep2026", type number}, {"inflation_pct_Sep2022_Sep2026", type number}, {"fx_Sep2022_LCU_per_USD", type number}, {"fx_Sep2026_LCU_per_USD", type number}, {"fx_factor_Sep2022_Sep2026", type number}, {"x48_2026", type number}, {"x49_2026", type number}, {"x50_2026", type number}, {"x51_2026", type number}, {"x52_2026", type number}, {"x53_2026", type number}, {"x54_2026", type number}, {"x55_2026", type number}, {"x48_2026_local", type number}, {"x49_2026_local", type number}, {"x50_2026_local", type number}, {"x51_2026_local", type number}, {"x52_2026_local", type number}, {"x53_2026_local", type number}, {"x54_2026_local", type number}}),
-				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo cambiado",{{"x48_2026", "Renta 1 hab centro USD"}, {"x49_2026", "Renta 1 hab fuera USD"}, {"x50_2026", "Renta 3 hab centro USD"}, {"x51_2026", "Renta 3 hab fuera USD"}, {"x52_2026", "Compra m^2 centro USD"}, {"x53_2026", "Compra m^2 fuera USD"}, {"x54_2026", "Salario neto mensual promedio USD"}, {"x48_2026_local", "Renta 1 hab centro ML"}, {"x49_2026_local", "Renta 1 hab fuera ML"}, {"x50_2026_local", "Renta 3 hab centro ML"}, {"x51_2026_local", "Renta 3 hab fuera ML"}, {"x52_2026_local", "Compra m^2 centro  ML"}, {"x53_2026_local", "Compra m^2 fuera ML"}, {"x54_2026_local", "Salario neto mensual promedio ML"}}),
-				    #"Personalizada agregada" = Table.AddColumn(#"Columnas con nombre cambiado", "CityCountryKey", each Text.Lower(Text.Trim([city])) & "|" & Text.Lower(Text.Trim([country])))
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"source_row_id", Int64.Type}, {"city", type text}, {"country", type text}, {"x48", type number}, {"x49", type number}, {"x50", type number}, {"x51", type number}, {"x52", type number}, {"x53", type number}, {"x54", type number}, {"x55", type number}, {"data_quality", Int64.Type}, {"IMF_country_code", type text}, {"country_link_status", type text}, {"monthly_CPI_status", type text}, {"monthly_FX_status", type text}, {"CPI_Sep2022", type number}, {"CPI_Sep2026", type number}, {"inflation_factor_Sep2022_Sep2026", type number}, {"inflation_pct_Sep2022_Sep2026", type number}, {"fx_Sep2022_LCU_per_USD", type number}, {"fx_Sep2026_LCU_per_USD", type number}, {"fx_factor_Sep2022_Sep2026", type number}, {"Renta 1 hab centro USD", type number}, {"Renta 1 hab fuera USD", type number}, {"Renta 3 hab centro USD", type number}, {"Renta 3 hab fuera USD", type number}, {"Compra m^2 centro USD", type number}, {"Compra m^2 fuera USD", type number}, {"Salario neto mensual promedio USD", type number}, {"Tipo de interés hipotecario en porcentajes (%), anual", type number}, {"Renta 1 hab centro ML", type number}, {"Renta 1 hab fuera ML", type number}, {"Renta 3 hab centro ML", type number}, {"Renta 3 hab fuera ML", type number}, {"Compra m^2 centro ML", type number}, {"Compra m^2 fuera ML", type number}, {"Salario neto mensual promedio ML", type number}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Tipo cambiado", "CityCountryKey", each Text.Lower(Text.Trim([city])) & "|" & Text.Lower(Text.Trim([country]))),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Personalizada agregada",{{"CityCountryKey", type text}})
 				in
-				    #"Personalizada agregada"
+				    #"Tipo cambiado1"
 
 	annotation PBI_NavigationStepName = Navegación
 
