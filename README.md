@@ -58,6 +58,28 @@ Ejecuta el flujo:
 ```bash
 python src/descargar_inegi.py
 ```
+## Validación de medidas con pandas
+
+#### Anuncios Airbnb
+
+- **DAX:** `DISTINCTCOUNT(Airbnb_CDMX[listing_id])`
+- **Archivo usado:** `data/processed/Airbnb_CDMX.csv`
+- **Comprobación en pandas:** conteo de `listing_id` únicos con `nunique(dropna=False)`.
+- **Power BI:** 30,468
+- **pandas:** 30,468
+- **Diferencia:** 0
+- **Resultado:** Coinciden; medida validada.
+
+#### Precio mediano por noche MXN
+
+- **DAX:** mediana de `precio_noche_mxn`, filtrando cotizaciones disponibles y no mensualizadas.
+- **Archivo usado:** `data/processed/Airbnb_CDMX.csv`
+- **Registros con precio considerados por pandas:** 28,063
+- **Power BI:** $1,505.00 MXN
+- **pandas:** $1,505.00 MXN
+- **Diferencia:** $0.00
+- **Resultado:** Coinciden; medida validada.
+
 
 ## Buenas prácticas
 - Mantener los datos originales en **data/** sin modificarlos directamente.
