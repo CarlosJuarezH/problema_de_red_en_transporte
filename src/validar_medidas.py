@@ -56,3 +56,22 @@ print(f"Renta promedio según pandas: {renta_promedio}")
 print(f"Salario promedio según pandas: {salario_promedio}")
 print(f"Carga decimal según pandas: {carga_decimal:.6f}")
 print(f"Carga porcentual según pandas: {carga_decimal * 100:.2f}%")
+
+############## INEGI
+base_inegi = pd.read_parquet(
+    "data/processed/inegi_cdmx_20261117T025258Z.parquet"
+)
+
+observacion = base_inegi.loc[
+    (base_inegi["indicator_id"].astype(str).str.strip() == "6207019027")
+    & (base_inegi["geography_code"].astype(str).str.strip() == "09002")
+    & (pd.to_numeric(base_inegi["period"], errors="coerce") == 2025),
+    "value"
+]
+
+print(f"Observaciones encontradas: {len(observacion)}")
+
+if len(observacion) == 1:
+    valor_inegi = float(observacion.iloc[0])
+    print(f"Valor original de INEGI: {valor_inegi}")
+    print(f"Porcentaje esperado en Power BI: {valor_inegi:.2f}%")

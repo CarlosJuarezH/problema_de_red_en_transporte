@@ -91,6 +91,16 @@ python src/descargar_inegi.py
 - **Resultado:** Coinciden al redondear a dos decimales; medida validada.
 - **Contexto:** tabla completa, sin filtros ni segmentadores.
 
+#### Porcentaje de viviendas alquiladas (INEGI)
+
+- **DAX:** promedio de `INEGI[value]` para el indicador `6207019027`, dividido entre 100 y mostrado como porcentaje.
+- **Archivo usado:** `data/processed/inegi_cdmx_20261117T025258Z.parquet`
+- **Contexto comparado:** `geography_code = 09002`, periodo 2025.
+- **Valor original de INEGI según pandas:** 27.966695
+- **Power BI:** 27.97 %
+- **pandas:** 27.97 %
+- **Resultado:** Coinciden al redondear a dos decimales; medida validada.
+
 ## Buenas prácticas
 - Mantener los datos originales en **data/** sin modificarlos directamente.
 - Usar mensajes de commit claros y atómicos para reflejar el progreso.
