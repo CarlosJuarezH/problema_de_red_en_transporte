@@ -80,6 +80,26 @@ python src/descargar_inegi.py
 - **Diferencia:** $0.00
 - **Resultado:** Coinciden; medida validada.
 
+#### Carga 3 hab centro
+
+- **DAX:** `DIVIDE([Renta 3 habitaciones centro USD], [Salario neto mensual en USD])`
+- **Archivo usado:** `data/processed/Costo_de_vida_limpio.xlsx`, hoja `Datos_limpios`
+- **Renta promedio según pandas:** 1,798.10 USD
+- **Salario promedio según pandas:** 2,607.37 USD
+- **Carga según pandas:** 68.96 %
+- **Power BI:** 68.96 %
+- **Resultado:** Coinciden al redondear a dos decimales; medida validada.
+- **Contexto:** tabla completa, sin filtros ni segmentadores.
+
+#### Porcentaje de viviendas alquiladas (INEGI)
+
+- **DAX:** promedio de `INEGI[value]` para el indicador `6207019027`, dividido entre 100 y mostrado como porcentaje.
+- **Archivo usado:** `data/processed/inegi_cdmx_20261117T025258Z.parquet`
+- **Contexto comparado:** `geography_code = 09002`, periodo 2025.
+- **Valor original de INEGI según pandas:** 27.966695
+- **Power BI:** 27.97 %
+- **pandas:** 27.97 %
+- **Resultado:** Coinciden al redondear a dos decimales; medida validada.
 
 ## Buenas prácticas
 - Mantener los datos originales en **data/** sin modificarlos directamente.
