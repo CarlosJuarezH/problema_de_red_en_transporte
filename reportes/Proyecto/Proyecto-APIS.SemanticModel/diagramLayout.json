@@ -10,8 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 28.571428571428555,
-            "y": 360.89285714285717
+            "x": 0,
+            "y": 372.32142857142861
           },
           "nodeIndex": "SelectorHabitacion",
           "nodeLineageTag": "dce20fb3-9fed-4ff0-adc2-e4a397b8b5e3",
@@ -36,8 +36,8 @@
         },
         {
           "location": {
-            "x": 1358,
-            "y": 65.000000000000057
+            "x": 826.57142857142844,
+            "y": 433.57142857142861
           },
           "nodeIndex": "INEGI",
           "nodeLineageTag": "ad987a0f-fbe9-4e8a-abb5-605ee92705e0",
@@ -75,8 +75,8 @@
         },
         {
           "location": {
-            "x": 1080.285714285714,
-            "y": 397.49999999999994
+            "x": 424.57142857142838,
+            "y": 488.92857142857144
           },
           "nodeIndex": "DimFecha",
           "nodeLineageTag": "5f98656f-020f-4c8e-9d02-3a4f6f1f42fe",
@@ -88,10 +88,11 @@
         },
         {
           "location": {
-            "x": 25.714285714285722,
-            "y": 0
+            "x": 0,
+            "y": 24.285714285714292
           },
           "nodeIndex": "Costo_de_vida_limpio",
+          "nodeLineageTag": "8ac0c2be-45b6-4e73-b5e5-42021a7c9e15",
           "size": {
             "height": 300,
             "width": 234
