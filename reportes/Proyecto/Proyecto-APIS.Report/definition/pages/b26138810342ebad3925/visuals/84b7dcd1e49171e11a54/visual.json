@@ -181,8 +181,8 @@
                         "Type": 0
                       },
                       {
-                        "Name": "a",
-                        "Entity": "Airbnb_CDMX",
+                        "Name": "i",
+                        "Entity": "INEGI",
                         "Type": 0
                       }
                     ],
@@ -203,18 +203,13 @@
                       {
                         "Direction": 2,
                         "Expression": {
-                          "Aggregation": {
+                          "Measure": {
                             "Expression": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "a"
-                                  }
-                                },
-                                "Property": "alcaldia"
+                              "SourceRef": {
+                                "Source": "i"
                               }
                             },
-                            "Function": 2
+                            "Property": "Viviendas rentadas INEGI %"
                           }
                         }
                       }

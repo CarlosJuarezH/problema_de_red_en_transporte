@@ -25,7 +25,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Fuente: Global Cost of Living (Kaggle); actualización propia con IPC y tipo de cambio mensual. Base original asumida sep-2022; equivalencia estimada sep-2026. USD/mes. Licencia: CC0:Public Domain.'"
+                  "Value": "'Fuente: Global Cost of Living (Kaggle); actualización propia con IPC y tipo de cambio mensual. Base original asumida sep-2022; equivalencia estimada sep-2026. Carga de renta (%). Licencia: CC0:Public Domain.'"
                 }
               }
             },
