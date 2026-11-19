@@ -3,7 +3,11 @@
 Este proyecto analiza diferencias entre renta mensual estimada y salario neto individual en distintas ciudades, y caracteriza la oferta de Airbnb en Ciudad de México por tipo de alojamiento, precio y estancia.
 
 ## Pregunta de investigación
-¿Cómo varía la relación entre la renta mensual y el salario neto mensual estimado entre las ciudades de la base global, y cómo se distribuye la oferta de Airbnb en Ciudad de México?
+¿Cómo varía la relación entre la renta mensual y el salario neto mensual estimado entre las ciudades de la base global, y cómo se distribuye la oferta de Airbnb en CDMX por ubicación, tipo de alojamiento, precio por noche y estancia mínima?
+
+## Idea: 
+Comparar a nivel global y nacional la carga de la renta frente al salario neto mensual estimado; respecto a la Ciudad de México observar donde se concentra la oferta de los anuncios de Airbnb y su composición por tipo de alojamiento, precio por noche y estancia mínima, sin inferir que la oferta de Airbnb cause las cargas de renta observadas.
+
 
 
 ## Estructura del repositorio:
