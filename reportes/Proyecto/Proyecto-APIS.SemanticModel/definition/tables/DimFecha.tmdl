@@ -4,13 +4,15 @@ table DimFecha
 
 	column Date
 		isKey
-		formatString: General Date
+		formatString: Long Date
 		lineageTag: e84e63cc-c4df-4761-80c0-2764a08883bf
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Date]
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column Año
 		formatString: 0
