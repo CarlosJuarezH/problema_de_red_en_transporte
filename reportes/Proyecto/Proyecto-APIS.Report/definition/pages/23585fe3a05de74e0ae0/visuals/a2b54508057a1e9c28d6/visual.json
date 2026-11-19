@@ -46,7 +46,8 @@
                 }
               },
               "queryRef": "SelectorHabitacion.Renta centro seleccionada MXM",
-              "nativeQueryRef": "Renta centro seleccionada MXM"
+              "nativeQueryRef": "Renta centro seleccionada MXN",
+              "displayName": "Renta centro seleccionada MXN"
             },
             {
               "field": {
@@ -60,7 +61,8 @@
                 }
               },
               "queryRef": "SelectorHabitacion.Renta fuera seleccionada MXM",
-              "nativeQueryRef": "Renta fuera seleccionada MXM"
+              "nativeQueryRef": "Renta fuera seleccionada MXN",
+              "displayName": "Renta fuera seleccionada MXN"
             }
           ]
         }

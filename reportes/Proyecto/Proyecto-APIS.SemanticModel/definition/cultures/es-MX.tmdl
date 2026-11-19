@@ -1991,6 +1991,16 @@ cultureInfo es-MX
 			          "renta centro seleccionada MXM": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Renta centro seleccionada MXN": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2006,6 +2016,16 @@ cultureInfo es-MX
 			        {
 			          "renta fuera seleccionada MXM": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Renta fuera seleccionada MXN": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -6805,6 +6825,42 @@ cultureInfo es-MX
 			          }
 			        }
 			      ]
+			    },
+			    "inegi.viviendas_rentadas_INEGI_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "INEGI",
+			          "ConceptualProperty": "Viviendas rentadas INEGI %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "viviendas rentadas INEGI %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vivienda rentada inegi percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "vivienda rentada inegi pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -7946,6 +8002,39 @@ cultureInfo es-MX
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "costo_de_vida_limpios_have_dim_ciudad_paises"
+			        }
+			      ]
+			    },
+			    "inegi_has_viviendas_rentadas_INEGI_": {
+			      "Binding": {
+			        "ConceptualEntity": "INEGI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "inegi": {
+			          "Target": {
+			            "Entity": "inegi"
+			          }
+			        },
+			        "inegi.viviendas_rentadas_INEGI_": {
+			          "Target": {
+			            "Entity": "inegi.viviendas_rentadas_INEGI_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "inegi"
+			            },
+			            "Object": {
+			              "Role": "inegi.viviendas_rentadas_INEGI_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "inegis_have_viviendas_rentadas_INEGI_"
 			        }
 			      ]
 			    },
