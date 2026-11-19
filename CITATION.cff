@@ -1,6 +1,10 @@
 cff-version: 1.2.0
-title: "problema_de_red_en_transporte"
-version: "v1.0-fase1"
-date-released: 2026-09-01
+message: "Si utilizas este proyecto, cita la versión publicada como se indica aquí."
+title: "Vivienda, renta y oferta de Airbnb en Ciudad de México"
+version: 1.0.0
+type: software
+repository-code: "https://github.com/CarlosJuarezH/problema_de_red_en_transporte"
+license: MIT
 authors:
-  - name: "Carlos Manuel Juárez Hernández"
+  - family-names: "Juárez Hernández"
+    given-names: "Carlos Manuel"
