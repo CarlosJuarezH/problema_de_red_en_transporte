@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "4a8546ab4dc8ac057d70",
   "position": {
-    "x": 899.40149234192961,
-    "y": 94.10236942008116,
+    "x": 886,
+    "y": 94,
     "z": 3000,
-    "height": 95.912030370467335,
-    "width": 256.971854954837,
+    "height": 96,
+    "width": 270,
     "tabOrder": 3000
   },
   "visual": {
@@ -189,7 +189,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Alojamiento completo'"
+                  "Value": "'Anuncios de alojamiento entero (%)'"
                 }
               }
             },

@@ -25,7 +25,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Fuente: Inside Airbnb, descarga/corte: 25-sep-2026; depuración propia. Precio: MXN/noche cotizada; solo cotizaciones válidas no mensuales; fechas variables. Datos descargables: CC BY 4.0'"
+                  "Value": "'Fuente: Inside Airbnb, descarga/corte: 25-sep-2026; depuración propia. porcentaje de anuncios por tipo. Datos descargables: CC BY 4.0'"
                 }
               }
             },
@@ -43,7 +43,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "15D"
                 }
               }
             }

@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Airbnb_CDMX.Precio mediano por noche MXN",
-              "nativeQueryRef": "Precio mediano por noche MXN"
+              "nativeQueryRef": "Precio mediano por noche MXN",
+              "format": "\\$#,0.###############;-\\$#,0.###############;\\$#,0.###############"
             }
           ]
         }
@@ -245,7 +246,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'  Mediana cotizada por noche (MXM)'"
+                  "Value": "'  Mediana cotizada por noche (MXN)'"
                 }
               }
             },
@@ -319,6 +320,19 @@
         }
       ],
       "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
         {
           "properties": {
             "show": {

@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "2248fa511bd768199cb0",
   "position": {
-    "x": 20.583259351077906,
-    "y": 570.156284024858,
+    "x": 22,
+    "y": 612,
     "z": 6004,
     "height": 42,
     "width": 1134,
@@ -42,14 +42,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Fuente: Inside Airbnb, descarga/corte: 25-sep-2026; depuración propia. Precio: MXN/noche cotizada; solo cotizaciones válidas no mensuales; fechas variables. Datos descargables: CC BY 4.0.'"
+                  "Value": "'Fuente: Inside Airbnb, descarga/corte: 25-sep-2026; depuración propia. Anuncios para el mapa. Datos descargables: CC BY 4.0.'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "15D"
                 }
               }
             },

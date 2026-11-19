@@ -10,7 +10,7 @@
     "tabOrder": 3000
   },
   "visual": {
-    "visualType": "barChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -42,11 +42,27 @@
                       "Entity": "Costo_de_vida_limpio"
                     }
                   },
-                  "Property": "Precio compra fuera m2 MXM"
+                  "Property": "Precio compra centro m2 MXN"
                 }
               },
-              "queryRef": "Costo_de_vida_limpio.Precio compra fuera m2 MXM",
-              "nativeQueryRef": "Precio compra fuera m2 MXM"
+              "queryRef": "Costo_de_vida_limpio.Precio compra centro m2 MXN",
+              "nativeQueryRef": "Precio del m² en el centro de la ciudad",
+              "displayName": "Precio del m² en el centro de la ciudad"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Costo_de_vida_limpio"
+                    }
+                  },
+                  "Property": "Precio compra fuera m2 MXN"
+                }
+              },
+              "queryRef": "Costo_de_vida_limpio.Precio compra fuera m2 MXN",
+              "nativeQueryRef": "Precio del m² fuera del centro de la ciudad",
+              "displayName": "Precio del m² fuera del centro de la ciudad"
             }
           ]
         }
@@ -61,7 +77,7 @@
                     "Entity": "Costo_de_vida_limpio"
                   }
                 },
-                "Property": "Precio compra fuera m2 MXM"
+                "Property": "Precio compra centro m2 MXN"
               }
             },
             "direction": "Descending"
@@ -269,5 +285,148 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6c128d098c6187cea2ec",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "city"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5c7ccb7aa79b14ea496b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "Precio compra centro m2 MXN"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "92a7178655e61a640b07",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "Precio compra fuera m2 MXN"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b00377fc00de3be00825",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "CityCountryKey"
+          }
+        },
+        "type": "TopN",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "subquery",
+              "Expression": {
+                "Subquery": {
+                  "Query": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "Costo_de_vida_limpio",
+                        "Type": 0
+                      }
+                    ],
+                    "Select": [
+                      {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "c"
+                            }
+                          },
+                          "Property": "CityCountryKey"
+                        },
+                        "Name": "field"
+                      }
+                    ],
+                    "OrderBy": [
+                      {
+                        "Direction": 2,
+                        "Expression": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "c"
+                              }
+                            },
+                            "Property": "Precio compra centro m2 MXN"
+                          }
+                        }
+                      }
+                    ],
+                    "Top": 10
+                  }
+                }
+              },
+              "Type": 2
+            },
+            {
+              "Name": "c",
+              "Entity": "Costo_de_vida_limpio",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "c"
+                          }
+                        },
+                        "Property": "CityCountryKey"
+                      }
+                    }
+                  ],
+                  "Table": {
+                    "SourceRef": {
+                      "Source": "subquery"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
   }
 }

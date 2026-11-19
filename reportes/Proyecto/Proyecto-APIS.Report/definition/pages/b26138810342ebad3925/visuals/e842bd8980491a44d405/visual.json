@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "e842bd8980491a44d405",
   "position": {
-    "x": 1184,
-    "y": 1028,
+    "x": 1156,
+    "y": 1030,
     "z": 6008,
-    "height": 30,
-    "width": 714,
+    "height": 50,
+    "width": 742,
     "tabOrder": 6008
   },
   "visual": {
@@ -42,14 +42,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Fuente: Inside Airbnb, descarga/corte: 25-sep-2026; depuración propia. Precio: MXN/noche cotizada; solo cotizaciones válidas no mensuales; fechas variables. Datos descargables: CC BY 4.0.'"
+                  "Value": "'Fuente: INEGI, Banco de Indicadores, indicador 6207019027; periodo 2025; procesamiento propio. Unidad: porcentaje de viviendas particulares habitadas rentadas. Uso: Términos de Libre Uso de la Información del INEGI.'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "13D"
                 }
               }
             },

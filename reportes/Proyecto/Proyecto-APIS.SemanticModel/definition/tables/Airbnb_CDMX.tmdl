@@ -49,8 +49,10 @@ table Airbnb_CDMX
 			    'Airbnb_CDMX'[cotizacion_disponible] = TRUE(),
 			    'Airbnb_CDMX'[cotizacion_mensualizada] = FALSE()
 			)
-		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
 		lineageTag: f83971c0-6aca-4917-9352-cafe65c4219b
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
 
 	measure 'Anuncios con mínimo registrado' =
 			

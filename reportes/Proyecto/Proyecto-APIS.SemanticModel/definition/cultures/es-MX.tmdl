@@ -1829,34 +1829,54 @@ cultureInfo es-MX
 			        }
 			      ]
 			    },
-			    "costo_de_vida_limpio.precio_compra_centro_m2_MXM": {
+			    "costo_de_vida_limpio.precio_compra_centro_m2_MXN": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Costo_de_vida_limpio",
-			          "ConceptualProperty": "Precio compra centro m2 MXM"
+			          "ConceptualProperty": "Precio compra centro m2 MXN"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "precio compra centro m2 MXM": {
+			          "precio compra centro m2 MXN": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Precio del m² en el centro de la ciudad": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
 			    },
-			    "costo_de_vida_limpio.precio_compra_fuera_m2_MXM": {
+			    "costo_de_vida_limpio.precio_compra_fuera_m2_MXN": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Costo_de_vida_limpio",
-			          "ConceptualProperty": "Precio compra fuera m2 MXM"
+			          "ConceptualProperty": "Precio compra fuera m2 MXN"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "precio compra fuera m2 MXM": {
+			          "precio compra fuera m2 MXN": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Precio del m² fuera del centro de la ciudad": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -11487,7 +11507,7 @@ cultureInfo es-MX
 			        }
 			      ]
 			    },
-			    "costo_de_vida_limpio_has_precio_compra_fuera_m2_MXM": {
+			    "costo_de_vida_limpio_has_precio_compra_fuera_m2_MXN": {
 			      "Binding": {
 			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
@@ -11498,9 +11518,9 @@ cultureInfo es-MX
 			            "Entity": "costo_de_vida_limpio"
 			          }
 			        },
-			        "costo_de_vida_limpio.precio_compra_fuera_m2_MXM": {
+			        "costo_de_vida_limpio.precio_compra_fuera_m2_MXN": {
 			          "Target": {
-			            "Entity": "costo_de_vida_limpio.precio_compra_fuera_m2_MXM"
+			            "Entity": "costo_de_vida_limpio.precio_compra_fuera_m2_MXN"
 			          }
 			        }
 			      },
@@ -11511,16 +11531,16 @@ cultureInfo es-MX
 			              "Role": "costo_de_vida_limpio"
 			            },
 			            "Object": {
-			              "Role": "costo_de_vida_limpio.precio_compra_fuera_m2_MXM"
+			              "Role": "costo_de_vida_limpio.precio_compra_fuera_m2_MXN"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "costo_de_vida_limpios_have_precio_compra_fuera_m2_MXM"
+			          "ID": "costo_de_vida_limpios_have_precio_compra_fuera_m2_MXN"
 			        }
 			      ]
 			    },
-			    "costo_de_vida_limpio_has_precio_compra_centro_m2_MXM": {
+			    "costo_de_vida_limpio_has_precio_compra_centro_m2_MXN": {
 			      "Binding": {
 			        "ConceptualEntity": "Costo_de_vida_limpio"
 			      },
@@ -11531,9 +11551,9 @@ cultureInfo es-MX
 			            "Entity": "costo_de_vida_limpio"
 			          }
 			        },
-			        "costo_de_vida_limpio.precio_compra_centro_m2_MXM": {
+			        "costo_de_vida_limpio.precio_compra_centro_m2_MXN": {
 			          "Target": {
-			            "Entity": "costo_de_vida_limpio.precio_compra_centro_m2_MXM"
+			            "Entity": "costo_de_vida_limpio.precio_compra_centro_m2_MXN"
 			          }
 			        }
 			      },
@@ -11544,12 +11564,12 @@ cultureInfo es-MX
 			              "Role": "costo_de_vida_limpio"
 			            },
 			            "Object": {
-			              "Role": "costo_de_vida_limpio.precio_compra_centro_m2_MXM"
+			              "Role": "costo_de_vida_limpio.precio_compra_centro_m2_MXN"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "costo_de_vida_limpios_have_precio_compra_centro_m2_MXM"
+			          "ID": "costo_de_vida_limpios_have_precio_compra_centro_m2_MXN"
 			        }
 			      ]
 			    },

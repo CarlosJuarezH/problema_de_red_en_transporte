@@ -453,5 +453,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "de437963d8817ebab32d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "Ciudad - País"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "cedf9ee830c4e381ee01",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "Renta 1 hab / salario centro USD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c2b1d2d335deb10d32d9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Costo_de_vida_limpio"
+              }
+            },
+            "Property": "Renta 1 hab / salario fuera USD"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

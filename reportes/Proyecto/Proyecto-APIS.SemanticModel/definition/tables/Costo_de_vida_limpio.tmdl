@@ -65,11 +65,11 @@ table Costo_de_vida_limpio
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 84dad05a-6ae8-496e-8b36-4e3c2074a682
 
-	measure 'Precio compra centro m2 MXM' = AVERAGE(Costo_de_vida_limpio[Compra m^2 centro  ML])
+	measure 'Precio compra centro m2 MXN' = AVERAGE(Costo_de_vida_limpio[Compra m^2 centro ML])
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: c7bd4f4b-81d0-4292-8d01-ff90f0e97676
 
-	measure 'Precio compra fuera m2 MXM' = AVERAGE(Costo_de_vida_limpio[Compra m^2 fuera ML])
+	measure 'Precio compra fuera m2 MXN' = AVERAGE(Costo_de_vida_limpio[Compra m^2 fuera ML])
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 7a44c4d5-ab06-4f39-a12a-b4e3251666b8
 

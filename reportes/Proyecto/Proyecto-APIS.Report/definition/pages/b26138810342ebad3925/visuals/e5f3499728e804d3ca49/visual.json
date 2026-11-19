@@ -245,7 +245,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Anuncios con mínimo requerido de 7 noches o menos'"
+                  "Value": "'Anuncios cuya estancia mínima es de 7 noches o menos '"
                 }
               }
             },
